@@ -1,0 +1,1 @@
+﻿.downloads{display:grid;grid-template-columns:repeat(auto-fit, minmax(250px, 1fr));gap:16px;margin:20px 0}.downloads>div>h4{display:flex;gap:4px;margin-top:0;border-bottom:2px solid #e0e0e0;padding-bottom:8px}.downloads>div>h4>img{width:1em}.downloads>div>ul{list-style:none;padding-left:0}.downloads>div>ul>li{margin:8px 0}.downloads>div>ul>li::before{content:"→ "}

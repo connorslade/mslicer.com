@@ -1,0 +1,49 @@
+body {
+    max-width: 1000px;
+    & > img {
+        max-width: 1000px;
+    }
+
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+
+    font-family: "Inter";
+    text-align: justify;
+}
+
+a {
+    text-decoration-style: wavy;
+    text-decoration-thickness: 1px;
+}
+
+img {
+    border-radius: 4px;
+}
+
+footer {
+    text-align: center;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+
+    & > .title {
+        display: flex;
+        margin: 0;
+        gap: 8px;
+
+        font-family: "Ubuntu Light";
+
+        & > img {
+            height: 43px;
+        }
+    }
+
+    & > .links {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+    }
+}

@@ -1,0 +1,15 @@
+base_url = "https://mslicer.com"
+title = "mslicer"
+description = "An open source slicer for masked stereolithography (resin) printers."
+author = "Connor Slade"
+
+compile_sass = true
+minify_html = true
+generate_feeds = true
+
+[markdown]
+[markdown.highlighting]
+theme = "catppuccin-mocha"
+
+[extra]
+# Put all your custom variables here
