@@ -12,7 +12,7 @@ generate_feeds = true
 theme = "min-light"
 
 [extra]
-commit = "f5d2daf"
+commit = ""
 
 # Latest release
 version = "0.5.0"

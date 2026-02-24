@@ -6,7 +6,7 @@ template: index.html
 An performant open-source slicer for masked stereolithography (resin) printers.
 Compatible with printers that support the following file formats: Chitu (.ctb), Elegoo (.goo), NanoDLP (.nanodlp), and Vector (.svg).
 
-<div>
+<div class="screenshots">
     <img src="/images/frog.png" id="s-1" />
     <img src="/images/supported-dragon.png" id="s-2" />
     <div class="screenshot-selector">
@@ -46,7 +46,7 @@ No other slicers have this functionality completely built-in.
 
 ### Stable Releases
 
-The latest stable version is [v{{ config(key='version') }}](/changelog), released on {{ config(key='release-date') }}.
+The latest stable version [v{{config(key='version')}}](/changelog), was released on {{ config(key='release-date') }}.
 
 <div class="downloads" >
     <div>
