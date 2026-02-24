@@ -1,3 +1,5 @@
+@use "fonts";
+
 body {
     max-width: 1000px;
     margin: 0;
@@ -7,7 +9,7 @@ body {
     left: 50%;
     transform: translateX(-50%);
 
-    font-family: "Inter";
+    font-family: fonts.$deja-vu-sans;
     text-align: justify;
 }
 
@@ -42,7 +44,7 @@ pre {
         margin-right: 8px;
         gap: 8px;
 
-        font-family: "Ubuntu Light";
+        font-family: fonts.$ubuntu;
 
         & > img {
             height: 43px;

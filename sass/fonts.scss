@@ -1,0 +1,16 @@
+@font-face {
+    font-family: "DejaVuSans";
+    src: url("/fonts/DejaVuSans.woff2") format("woff2");
+}
+@font-face {
+    font-family: "DejaVuSans";
+    src: url("/fonts/DejaVuSans-Bold.woff2") format("woff2");
+    font-weight: bold;
+}
+$deja-vu-sans: "DejaVuSans", sans-serif;
+
+@font-face {
+    font-family: "Ubuntu";
+    src: url("/fonts/Ubuntu-Light.woff2") format("woff2");
+}
+$ubuntu: "Ubuntu", sans-serif;
