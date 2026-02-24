@@ -10,3 +10,10 @@ generate_feeds = true
 [markdown]
 [markdown.highlighting]
 theme = "min-light"
+
+[extra]
+commit = "430900b"
+
+# Latest release
+version = "0.5.0"
+release-date = "February 21st, 2026"

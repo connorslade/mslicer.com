@@ -1,4 +1,19 @@
-{% extends "base.html" %} {% block header %}
-<link rel="stylesheet" href="/index.css" />
-{% endblock header %} {% block content %} {{ section.content | safe }} {%
-endblock content %}
+{% extends "base.html" %}
+
+{% block header %}
+    <link rel="stylesheet" href="/index.css" />
+    <meta name="description" content="{{ section.description }}" />
+    <meta property="og:description" content="{{ section.description }}" />
+    
+    {% if section.title %}
+        <meta property="og:title" content="{{ section.title }}" />
+        <title>{{ section.title }} &mdash; mslicer</title>
+    {% else %}
+        <meta property="og:title" content="mslicer" />
+        <title>mslicer</title>
+    {% endif %}
+{% endblock header %}
+
+{% block content %}
+    {{ section.content | safe}}
+{% endblock content %}

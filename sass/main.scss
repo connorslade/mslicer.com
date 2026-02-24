@@ -1,5 +1,7 @@
 body {
     max-width: 1000px;
+    margin: 0;
+    padding: 8px;
 
     position: relative;
     left: 50%;
@@ -32,10 +34,12 @@ pre {
 .header {
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
 
     & > .title {
         display: flex;
         margin: 0;
+        margin-right: 8px;
         gap: 8px;
 
         font-family: "Ubuntu Light";

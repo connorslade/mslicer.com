@@ -6,7 +6,6 @@
         <link rel="icon" href="/icons/mslicer.svg" />
         <link rel="stylesheet" href="/main.css" />
         {% block header %} {% endblock header %}
-        <title>mslicer</title>
     </head>
     <body>
         <div class="header">
@@ -25,7 +24,11 @@
         <hr />
 
         <footer>
-            <a href="https://connorcode.com">Connor Slade</a> ∙ February 2026
+            <a href="https://connorcode.com">Connor Slade</a> ∙ {{ now() |
+            date(format="%B %Y") }} (<a
+                href="https://github.com/connorslade/mslicer.com/tree/{{ config.extra.commit }}"
+                >{{ config.extra.commit }}</a
+            >)
         </footer>
     </body>
 </html>
