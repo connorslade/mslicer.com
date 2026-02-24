@@ -1,4 +1,6 @@
-{% extends "base.html" %} {% block content %}
+{% extends "base.html" %} {% block header %}
+<link rel="stylesheet" href="/changelog.css" />
+{% endblock header %} {% block content %}
 <h2 class="title">{{ section.title }}</h2>
 <ul>
     {% for page in section.pages %}

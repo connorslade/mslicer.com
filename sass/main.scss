@@ -1,8 +1,5 @@
 body {
     max-width: 1000px;
-    & > img {
-        max-width: 1000px;
-    }
 
     position: relative;
     left: 50%;
@@ -19,10 +16,17 @@ a {
 
 img {
     border-radius: 4px;
+    width: -webkit-fill-available;
+    width: -moz-available;
 }
 
 footer {
     text-align: center;
+}
+
+pre {
+    padding: 8px;
+    border-radius: 4px;
 }
 
 .header {

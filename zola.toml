@@ -9,7 +9,4 @@ generate_feeds = true
 
 [markdown]
 [markdown.highlighting]
-theme = "catppuccin-mocha"
-
-[extra]
-# Put all your custom variables here
+theme = "min-light"
