@@ -3,7 +3,6 @@ title = "mslicer"
 description = "An open source slicer for masked stereolithography (resin) printers."
 author = "Connor Slade"
 
-compile_sass = true
 minify_html = true
 generate_feeds = true
 

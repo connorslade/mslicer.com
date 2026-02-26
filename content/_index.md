@@ -1,14 +1,14 @@
 ---
 description: An open source slicer for masked stereolithography (resin) printers.
-template: index.html
+template: section.html
 ---
 
 An performant open-source slicer for masked stereolithography (resin) printers.
 Compatible with printers that support the following file formats: Chitu (.ctb), Elegoo (.goo), NanoDLP (.nanodlp), and Vector (.svg).
 
 <div class="screenshots">
-    <img src="/images/frog.png" id="s-1" />
-    <img src="/images/supported-dragon.png" id="s-2" />
+    <img src="frog.png" id="s-1" />
+    <img src="supported-dragon.png" id="s-2" />
     <div class="screenshot-selector">
         <label><input type="radio" name="screenshot" id="sb-1" checked /> 1</label>
         <label><input type="radio" name="screenshot" id="sb-2" /> 2</label>
@@ -85,3 +85,87 @@ git clone https://github.com/connorslade/mslicer
 cd mslicer
 cargo build --release --package mslicer
 ```
+
+<style>
+    .downloads {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 16px;
+        margin: 20px 0;
+    
+        & > div {
+            & > h4 {
+                display: flex;
+                gap: 4px;
+    
+                margin-top: 0;
+                border-bottom: 2px solid #e0e0e0;
+                padding-bottom: 8px;
+    
+                & > img {
+                    width: 1em;
+                }
+            }
+    
+            & > ul {
+                list-style: none;
+                padding-left: 0;
+    
+                & > li {
+                    margin: 8px 0;
+    
+                    &::before {
+                        content: "→ ";
+                    }
+                }
+            }
+        }
+    }
+    
+    .screenshot-selector {
+        display: flex;
+        justify-content: center;
+        position: absolute;
+        transform: translateY(calc(-100% - 4px));
+    
+        & > label {
+            border: 1px solid #ddd;
+            border-bottom: 2px solid #ddd;
+            padding: 8px;
+            cursor: pointer;
+            background: #f5f5f5;
+            transition:
+                background 0.15s ease,
+                border 0.15s ease;
+    
+            &:has(input:checked) {
+                background: #e0e0e0;
+                border-bottom: 2px solid #000;
+            }
+    
+            &:has(input:focus-visible) {
+                outline: 2px solid #000;
+            }
+    
+            &:hover {
+                background: #e8e8e8;
+            }
+    
+            &:active {
+                background: #d0d0d0;
+            }
+    
+            & > input {
+                opacity: 0;
+                position: absolute;
+                pointer-events: none;
+            }
+        }
+    }
+    
+    body:has(input#sb-1:not(:checked)) #s-1,
+    body:has(input#sb-2:not(:checked)) #s-2,
+    body:has(input#sb-3:not(:checked)) #s-3 {
+        display: none;
+    }
+</style>

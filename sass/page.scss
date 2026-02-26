@@ -1,0 +1,12 @@
+.heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 21.44px;
+    margin-bottom: 21.44px;
+
+    & > h1,
+    & > p {
+        margin: 0;
+    }
+}

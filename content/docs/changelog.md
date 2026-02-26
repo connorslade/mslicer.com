@@ -1,12 +1,12 @@
 ---
-title: Changelog
-description: todo
-template: index.html
+title: Changelogs
+description: History of mslicer releases.
+date: 2026-02-23
 ---
 
-## Changelog
+You can view previous releases [on Github](https://github.com/connorslade/mslicer/releases).
 
-### v0.5.0 &mdash; February 21st, 2026
+## v0.5.0 &mdash; February 21st, 2026
 
 - Detect and show warnings for
   - Non-manifold meshes
@@ -43,11 +43,11 @@ template: index.html
 - Remove unfinished support for translucent models
 - Remove inconsistent slice preview pixel outlines (for now)
 
-### v0.4.0 &mdash; November 25th, 2025
+## v0.4.0 &mdash; November 25th, 2025
 
 - Added support for the encrypted Chitu format (.ctb)
 
-### v0.3.0 &mdash; November 15th, 2025
+## v0.3.0 &mdash; November 15th, 2025
 
 - Added support for SVGs as an output format
 - Don't show normals for hidden models
@@ -56,17 +56,17 @@ template: index.html
 - Recompute mesh normals by default (also removed the normal operations button)
 - Generated meshes (supports) now have correct normals and face winding order
 
-### v0.2.2 &mdash; June 14th, 2025
+## v0.2.2 &mdash; June 14th, 2025
 
 - Clamp grid size
 - Fix intermittent crash due to mismatched texture formats between egui and renderer pipelines
 
-### v0.2.1 &mdash; April 13, 2025
+## v0.2.1 &mdash; April 13, 2025
 
 - Don't produce invalid results when models extend beyond build volume
 - Made the slicer system usable as a standalone CLI application
 
-### v0.2.0 &mdash; Feb 19, 2025
+## v0.2.0 &mdash; Feb 19, 2025
 
 - Convert slice operation window to a dockable panel
 - Render parts of models that go beyond the print volume red
@@ -75,7 +75,7 @@ template: index.html
 - Add random triangle color mesh render mode
 - Persist panel layout between sessions. I also added a button to reset the UI layout in the Workspace panel.
 
-### v0.1.0 &mdash; Feb 12, 2025
+## v0.1.0 &mdash; Feb 12, 2025
 
 First release!
 

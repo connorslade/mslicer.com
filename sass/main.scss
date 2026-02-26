@@ -14,8 +14,15 @@ body {
 }
 
 a {
+    color: blue;
     text-decoration-style: wavy;
     text-decoration-thickness: 1px;
+}
+
+img {
+    border-radius: 4px;
+    width: -webkit-fill-available;
+    width: -moz-available;
 }
 
 footer {
@@ -25,6 +32,23 @@ footer {
 pre {
     padding: 8px;
     border-radius: 4px;
+}
+
+.footnote-definition {
+    & > * {
+        display: inline;
+    }
+
+    & > sup {
+        display: inline-block;
+        margin-right: 0.3em;
+        font-size: inherit;
+        vertical-align: baseline;
+
+        &::after {
+            content: ": ";
+        }
+    }
 }
 
 .header {
@@ -42,6 +66,7 @@ pre {
 
         & > img {
             height: 43px;
+            width: auto;
         }
     }
 
