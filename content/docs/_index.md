@@ -18,5 +18,5 @@ description: mslicer documentation pages.
 ## Developers
 
 <!--- [Contributing](#)-->
-- [msla_format](msla-format) &mdash; Library for encoding and decoding common masked stereolithography (MSLA) file formats.
+- [msla_format](msla-format) &mdash; Library for encoding and decoding common MSLA file formats.
 - [goo](goo) &mdash; Deprecated library for for encoding and decoding Elegoo .goo files

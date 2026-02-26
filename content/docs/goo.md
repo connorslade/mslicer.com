@@ -1,6 +1,6 @@
 ---
 title: goo
-description: A Rust library for encoding and decoding common masked stereolithography (MSLA) file formats.
+description: A Rust library for encoding and decoding common MSLA file formats.
 date: 2026-02-25
 ---
 

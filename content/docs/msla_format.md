@@ -1,10 +1,10 @@
 ---
 title: msla_format
-description: A Rust library for encoding and decoding common masked stereolithography (MSLA) file formats.
+description: A Rust library for encoding and decoding common MSLA file formats.
 date: 2026-02-25
 ---
 
-A Rust library for encoding and decoding common masked stereolithography (MSLA) file formats.
+A Rust library for encoding and decoding common MSLA file formats.
 The following formats are supported: ChituBox v5 (`.ctb`), Elegoo v3.0 (`.goo`), and NanoDLP (.`nanodlp`).
 
 ## Links

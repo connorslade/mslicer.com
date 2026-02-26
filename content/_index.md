@@ -1,10 +1,10 @@
 ---
-description: An open source slicer for masked stereolithography (resin) printers.
+description: A high-performance, open-source slicer for MSLA resin printers.
 template: section.html
 ---
 
-A performant open-source slicer for masked stereolithography (resin) printers.
-Compatible with printers that support the following file formats: Chitu (.ctb), Elegoo (.goo), NanoDLP (.nanodlp), and Vector (.svg).
+A high-performance, open-source slicer for {{details(body="MSLA", desc="Masked stereolithography.\nUses an LCD mask to cure entire layers of resin at once.")}} resin printers.
+Compatible with printers that support any of the following file formats: Chitu (.ctb), Elegoo (.goo), or NanoDLP (.nanodlp).
 
 <div class="screenshots">
     <img src="frog.png" id="s-1" fetchpriority=high />

@@ -35,6 +35,12 @@ pre {
     border-radius: 4px;
 }
 
+[title] {
+    cursor: help;
+    text-decoration: underline;
+    text-decoration-style: dotted;
+}
+
 .footnote-definition {
     & > * {
         display: inline;
@@ -75,5 +81,9 @@ pre {
         display: flex;
         align-items: center;
         gap: 8px;
+
+        & > a {
+            color: blue;
+        }
     }
 }

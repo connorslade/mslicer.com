@@ -1,6 +1,6 @@
 base_url = "https://mslicer.com"
 title = "mslicer"
-description = "An open source slicer for masked stereolithography (resin) printers."
+description = "A high-performance, open-source slicer for MSLA resin printers."
 author = "Connor Slade"
 
 minify_html = true
