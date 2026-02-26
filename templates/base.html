@@ -3,13 +3,18 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="preload" href="/fonts/DejaVuSans.woff2" as="font" type="font/woff2" crossorigin />
         <link rel="icon" href="/icons/mslicer.ico" />
         <link rel="stylesheet" href="/main.css" />
+        
         {% block header %} {% endblock header %}
     </head>
     <body>
         <div class="header">
-            <h1 class="title"><img src="/icons/mslicer.svg" /> mslicer</h1>
+            <h1 class="title">
+                <img src="/icons/mslicer.svg" alt="mslicer logo" fetchpriority=high />
+                mslicer
+            </h1>
 
             <div class="links">
                 <a href="/">home</a>∙ <a href="/docs">docs</a>∙

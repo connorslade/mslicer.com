@@ -3,11 +3,11 @@ description: An open source slicer for masked stereolithography (resin) printers
 template: section.html
 ---
 
-An performant open-source slicer for masked stereolithography (resin) printers.
+A performant open-source slicer for masked stereolithography (resin) printers.
 Compatible with printers that support the following file formats: Chitu (.ctb), Elegoo (.goo), NanoDLP (.nanodlp), and Vector (.svg).
 
 <div class="screenshots">
-    <img src="frog.png" id="s-1" />
+    <img src="frog.png" id="s-1" fetchpriority=high />
     <img src="supported-dragon.png" id="s-2" />
     <div class="screenshot-selector">
         <label><input type="radio" name="screenshot" id="sb-1" checked /> 1</label>
@@ -46,7 +46,7 @@ No other slicers have this functionality completely built-in.
 
 ### Stable Releases
 
-The latest stable version [v{{config(key='version')}}](/changelog), was released on {{ config(key='release-date') }}.
+The latest stable version [v{{config(key='version')}}](/docs/changelog), was released on {{ config(key='release-date') }}.
 
 <div class="downloads" >
     <div>

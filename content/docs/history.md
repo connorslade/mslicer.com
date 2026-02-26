@@ -39,20 +39,20 @@ Most of the projects I work on are just for me, so it's been great to have a one
 
 ---
 
-[^2]: ### Scanline Fill Algorithm
+[^2]: Scanline Fill Algorithm
 
-This algorithm works by intersecting a horizontal scanline with your polygon at every y-value.
-Assuming the polygon is closed, you will get an even number of points, which are the segments of that row that are inside the polygon.
-Normally you would then fill these segments of pixels with some value.
+> This algorithm works by intersecting a horizontal scanline with your polygon at every y-value.
+> Assuming the polygon is closed, you will get an even number of points, which are the segments of that row that are inside the polygon.
+> Normally you would then fill these segments of pixels with some value.
 
-[^1]: ### Run-Length Encoding
+[^1]: Run-Length Encoding
 
-Because resin printers often have very high resolution displays/masks it would be impractical to store layer data uncompressed, for this reason all the supported formats make use of some form of run-length encoding (RLE).
-This is where equal adjacent values are grouped, so `0100001111` would be converted to `0×1, 1×1, 0×4, 1×4` because the sequence starts with one `0`, then one `1` then four `0`s, etc.
+> Because resin printers often have very high resolution displays/masks it would be impractical to store layer data uncompressed, for this reason all the supported formats make use of some form of run-length encoding (RLE).
+> This is where equal adjacent values are grouped, so `0100001111` would be converted to `0×1, 1×1, 0×4, 1×4` because the sequence starts with one `0`, then one `1` then four `0`s, etc.
 
-[^3]: ### NanoDLP Encoding
+[^3]: NanoDLP Encoding
 
-The NanoDLP format is interesting, but one strange thing about it is that it uses regular PNG images inside a zip file to store the layer data.
-When I was first implementing the NanoDLP format, I used an existing image processing library but didn't like how the time to encode all the PNGs was slowing down the slicing process more than the intersection tests.
-So I decided to write a custom PNG encoded optimized specifically for run-length encoded data, since that's white the polygon fill code outputs.
-I won't go into the details here, but although it took me a while to understand how everything works the [actual implementation](https://github.com/connorslade/mslicer/blob/39bd721fca9091749e1a0aa62c1fba573e1a5362/common/src/container/rle/png.rs) is not too complicated.
+> The NanoDLP format is interesting, but one strange thing about it is that it uses regular PNG images inside a zip file to store the layer data.
+> When I was first implementing the NanoDLP format, I used an existing image processing library but didn't like how the time to encode all the PNGs was slowing down the slicing process more than the intersection tests.
+> So I decided to write a custom PNG encoded optimized specifically for run-length encoded data, since that's white the polygon fill code outputs.
+> I won't go into the details here, but although it took me a while to understand how everything works the [actual implementation](https://github.com/connorslade/mslicer/blob/39bd721fca9091749e1a0aa62c1fba573e1a5362/common/src/container/rle/png.rs) is not too complicated.
