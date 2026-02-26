@@ -5,6 +5,7 @@ author = "Connor Slade"
 
 minify_html = true
 generate_feeds = true
+compile_sass = true
 
 [markdown]
 [markdown.highlighting]

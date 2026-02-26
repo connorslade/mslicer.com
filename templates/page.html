@@ -1,4 +1,5 @@
 {% extends "base.html" %}
+{% import "util.html" as util %}
 
 {% block header %}
     <link rel="stylesheet" href="/page.css" />
@@ -19,15 +20,7 @@
     <div class="heading">
         <h1>{{ page.title }}</h1>
         {% if page.date %}
-            <p>
-                {% set d = page.date | date(format="%-d") | int %}
-                {{ page.date | date(format="%B %-d") }}{% if d >= 11 and d <= 13 %}th
-                {% elif d % 10 == 1 %}st
-                {% elif d % 10 == 2 %}nd
-                {% elif d % 10 == 3 %}rd
-                {% else %}th
-                {% endif %}, {{ page.date | date(format="%Y") }}
-            </p>
+            <p>{{ util::format_date(date=page.date) }}</p>
         {% endif %}
     </div>
 

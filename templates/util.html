@@ -1,0 +1,4 @@
+{% macro format_date(date) %}
+    {% set d = date | date(format="%-d") | int %}
+    {{ date | date(format="%B %-d") }}{% if d >= 11 and d <= 13 %}th{% elif d % 10 == 1 %}st{% elif d % 10 == 2 %}nd{% elif d % 10 == 3 %}rd{% else %}th{% endif %}, {{ date | date(format="%Y") }}
+{% endmacro format_date %}
