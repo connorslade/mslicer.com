@@ -10,8 +10,8 @@ Compatible with printers that support any of the following file formats: Chitu (
     <img src="frog.png" id="s-1" fetchpriority=high />
     <img src="supported-dragon.png" id="s-2" />
     <div class="screenshot-selector">
-        <label><input type="radio" name="screenshot" id="sb-1" checked /> 1</label>
-        <label><input type="radio" name="screenshot" id="sb-2" /> 2</label>
+        <label><input type="radio" name="screenshot" id="sb-1" checked /></label>
+        <label><input type="radio" name="screenshot" id="sb-2" /></label>
     </div>
 </div>
 
@@ -124,36 +124,20 @@ cargo build --release --package mslicer
     
     .screenshot-selector {
         display: flex;
+        gap: 8px;
         justify-content: center;
-        position: absolute;
-        transform: translateY(calc(-100% - 4px));
+        height: 0px;
     
         & > label {
-            border: 1px solid #ddd;
-            border-bottom: 2px solid #ddd;
-            padding: 8px;
+            border-radius: 100%;
+            background: #444;
             cursor: pointer;
-            background: #f5f5f5;
-            transition:
-                background 0.15s ease,
-                border 0.15s ease;
+            padding: 5px;
+            opacity: 25%;
+            transition: opacity 0.15s ease;
     
-            &:has(input:checked) {
-                background: #e0e0e0;
-                border-bottom: 2px solid #000;
-            }
-    
-            &:has(input:focus-visible) {
-                outline: 2px solid #000;
-            }
-    
-            &:hover {
-                background: #e8e8e8;
-            }
-    
-            &:active {
-                background: #d0d0d0;
-            }
+            &:has(input:checked) { opacity: 100%; }
+            &:hover { opacity: 40%; }
     
             & > input {
                 opacity: 0;
@@ -164,8 +148,7 @@ cargo build --release --package mslicer
     }
     
     body:has(input#sb-1:not(:checked)) #s-1,
-    body:has(input#sb-2:not(:checked)) #s-2,
-    body:has(input#sb-3:not(:checked)) #s-3 {
+    body:has(input#sb-2:not(:checked)) #s-2 {
         display: none;
     }
 </style>
