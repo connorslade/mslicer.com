@@ -1,10 +1,40 @@
 ---
 title: Changelogs
 description: History of mslicer releases.
-date: 2026-02-23
+date: 2026-03-23
 ---
 
 You can view previous releases [on Github](https://github.com/connorslade/mslicer/releases).
+
+## v0.6.0 &mdash; March 23rd, 2026
+
+- New logo/icon (gnome inspired)
+- Better packaging for MacOS (.app bundle) and Windows (.rc file)
+- Keyboard shortcuts use ⌘ on MacOS
+- Fix panic caused by race condition
+- Show annotated layers on slice preview slider
+- Show project file name in window title
+- Cleanup slice preview scaling
+  - Will now always default to 1× scale
+  - Zooming is now centered on the cursor position
+- Cleanup model panel UI
+- Remove accidental doc-tests in [stl.rs](https://github.com/connorslade/mslicer/blob/main/format/mesh_format/src/stl.rs), which blocking nixpkgs-update build
+- Make slices at middle of layer height (not bottom)
+- Fix volume stored in .nanodlp files
+- Add exposure PWM control to slice config ([#21](https://github.com/connorslade/mslicer/issues/21))
+- Fix layers rendering flipped in slice preview  ([#20](https://github.com/connorslade/mslicer/issues/20))
+- Use standard unit (mm/min) for lift/retract speeds and slice height ([#22](https://github.com/connorslade/mslicer/issues/22))
+- Replace about panel with a first time popup that links to the documentation
+- Show individual model volume (before slicing)
+- Model specific relative exposures ([#18](https://github.com/connorslade/mslicer/pull/18))
+- Correctly overwrite render settings when generating preview images
+  - Will now use rendered mode without overhang detection, the default fov, and the correct aspect ratio
+- Pick between Perspective or Orthographic camera projections
+- Camera pitch is no longer locked between (-90°, 90°)
+- Exposure test generator ([#24](https://github.com/connorslade/mslicer/pull/24))
+- Button to create new project
+- Fix numerical precision issues introduced when converting units
+- Replace tasks panel with top bar widget
 
 ## v0.5.0 &mdash; February 21st, 2026
 

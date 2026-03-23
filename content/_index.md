@@ -7,11 +7,13 @@ A high-performance, open-source slicer for {{details(body="MSLA", desc="Masked s
 Compatible with printers that support any of the following file formats: Chitu (.ctb), Elegoo (.goo), or NanoDLP (.nanodlp).
 
 <div class="screenshots">
-    <img src="frog.png" id="s-1" fetchpriority=high />
-    <img src="supported-dragon.png" id="s-2" />
+    <img src="supported-dragon.png" id="s-1" fetchpriority=high />
+    <img src="frog.png" id="s-2" />
+    <img src="about.png" id="s-3" />
     <div class="screenshot-selector">
         <label><input type="radio" name="screenshot" id="sb-1" checked /></label>
         <label><input type="radio" name="screenshot" id="sb-2" /></label>
+        <label><input type="radio" name="screenshot" id="sb-3" /></label>
     </div>
 </div>
 
@@ -66,7 +68,7 @@ The latest stable version [v{{config(key='version')}}](/docs/changelog), was rel
     <div>
         <h4><img src="icons/apple-logo-fill.svg">MacOS</h4>
         <ul>
-            <li><a href="https://github.com/connorslade/mslicer/releases/download/{{ config(key='version') }}/mslicer-aarch64-apple-darwin">App (Intel)</a></li>
+            <li><a href="https://github.com/connorslade/mslicer/releases/download/{{ config(key='version') }}/mslicer-x86_64-apple-darwin.zip">App (Intel)</a></li>
         </ul>
     </div>
 </div>
@@ -148,7 +150,8 @@ cargo build --release --package mslicer
     }
     
     body:has(input#sb-1:not(:checked)) #s-1,
-    body:has(input#sb-2:not(:checked)) #s-2 {
+    body:has(input#sb-2:not(:checked)) #s-2,
+    body:has(input#sb-3:not(:checked)) #s-3 {
         display: none;
     }
 </style>
