@@ -62,7 +62,7 @@ The latest stable version [v{{config(key='version')}}](/docs/changelog), was rel
     <div>
         <h4><img src="icons/windows-logo-fill.svg">Windows</h4>
         <ul>
-            <li><a href="https://github.com/connorslade/mslicer/releases/download/{{ config(key='version') }}/mslicer-x86_64-pc-windows-msvc.exe">Binary (x64)</a></li>
+            <li><a href="https://github.com/connorslade/mslicer/releases/download/{{ config(key='version') }}/mslicer-x86_64-pc-windows-gnu.exe">Binary (x64)</a></li>
         </ul>
     </div>
     <div>
