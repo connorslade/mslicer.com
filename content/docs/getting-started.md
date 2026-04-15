@@ -30,3 +30,9 @@ After starting a slice operation, a new panel will open showing the operation pr
 However, it shouldn't be open for long because (as far as I know) mslicer is the fastest MSLA slicer currently available (:p).
 You will then be presented with a slice preview.
 You can drag to pan, scroll to zoom, and scrub through the slider on the left to look through each layer.
+
+## Remote Print
+
+If you are using a printer with a Chitu mainboard, you can wirelessly start and monitor prints.
+However depending on your system you may need to change your firewall settings.
+You can either allow connections on the ports after they have been randomly picked or set and unblock default ports, check the Services dropdown in the Remote Print panel.
