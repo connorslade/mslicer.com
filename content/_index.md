@@ -19,8 +19,7 @@ Compatible with printers that support any of the following file formats: Chitu (
 
 ## Features
 
-mslicer is still in development and is not yet at feature parity with commercial slicers.
-There is still work to be done on support structure generation and optimized/3D anti-aliasing, but this section outlines some of it's more unique features.
+mslicer is still in development and is not yet at feature parity with commercial slicers, there is still work to be done on support structure generation.
 
 ### Open Source and Private
 
@@ -33,15 +32,21 @@ This also makes experimentation and research easier, something that's been commo
 
 ### Performance
 
-In my [(unscientific) testing](https://files.connorcode.com/Documents/mslicer/speed-chart.pdf), I've found that mslicer is often 20 to 120 times faster than competing slicers (crazy right‽).
+In my testing (see [Benchmark](/docs/benchmark)), I've found that mslicer is often 20 to 120 times faster than competing slicers (crazy right‽).
 For most use-cases this is just makes your workflow a little smoother, but with super high-poly models mslicer might be the only tool capable of the job.
+This is achieved with multithreading, acceleration structures, and by slicing directly into a {{details(body="RLE" desc="Run-length encoding\nConsecutive occurrences of the same value are stored as a single value and a count.")}} compressed form.
 
-This is achieved with multithreading, acceleration structures, and by slicing directly into the compressed formats used by MSLA file formats.
-You can read more about how it works on my personal website's [mslicer project page](https://connorcode.com/projects/mslicer).
+### 3D Anti-Aliasing
+
+Anti-aliasing (AA) reduces the stair-stepping caused by the discrete pixels and layers.
+Most slicers only implement XY-AA which increases the effective resolution in those axes; however this is getting less important with higher pixel density printers coming out.
+mslicer can apply anti-aliasing across all three axes, smoothing visible layer lines.
+
+> Note that this feature is currently only available in the <a href="#:~:text=Development Builds,-the">development builds</a>.
 
 ### Remote Print
 
-Inside of mslicer you can connect to Chitu-mainboard printers on your network and remotely start and monitor prints.
+Inside of mslicer you can connect to any Chitu-mainboard printers on your network and remotely start and monitor prints.
 No other slicers have this functionality completely built-in.
 
 ## Installation
@@ -75,7 +80,8 @@ The latest stable version [v{{config(key='version')}}](/docs/changelog), was rel
 
 ### Development Builds
 
-The latest development builds are available for Linux, Windows, and MacOS on [Github Actions](https://github.com/connorslade/mslicer/actions/workflows/build.yml?query=branch%3Amain%20is%3Asuccess).
+<!-- todo: Replace ?query=branch%3Amain%20is%3Asuccess -->
+The latest development builds are available for Linux, Windows, and MacOS on [Github Actions](https://github.com/connorslade/mslicer/actions/workflows/build.yml?query=is%3Asuccess).
 Just open the workflow run and download the correct artifact for your system.
 
 ### From Source

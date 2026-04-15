@@ -1,7 +1,7 @@
 ---
 title: Benchmark
 description: Speed comparison of mslicer with other slicers
-date: 2026-04-8
+date: 2026-04-15
 ---
 
 I often claim that mslicer is one of (if not the) fastest resin slicer currently available, so lets do some comparisons with other slicers: ChituBox, Lychee, Lychee Beta, and Photon Workshop.
