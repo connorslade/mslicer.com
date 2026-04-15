@@ -73,6 +73,7 @@ The latest stable version [v{{config(key='version')}}](/docs/changelog), was rel
     <div>
         <h4><img src="icons/apple-logo-fill.svg">MacOS</h4>
         <ul>
+            <li><a href="https://github.com/connorslade/mslicer/releases/download/{{ config(key='version') }}/mslicer-aarch64-apple-darwin.zip">App (Apple Silicon)</a></li>
             <li><a href="https://github.com/connorslade/mslicer/releases/download/{{ config(key='version') }}/mslicer-x86_64-apple-darwin.zip">App (Intel)</a></li>
         </ul>
     </div>
