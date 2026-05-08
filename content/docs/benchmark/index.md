@@ -90,6 +90,10 @@ It's basically just a bunch of columns.
         display: grid;
         grid-template-columns: 1fr 1.4fr;
         align-items: center;
+        
+        @media(max-width: 750px) {
+            grid-template-columns: 1fr;
+        }
     }
     
     .test-model img {

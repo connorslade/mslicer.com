@@ -1,10 +1,37 @@
 ---
 title: Changelogs
 description: History of mslicer releases.
-date: 2026-03-23
+date: 2026-05-07
 ---
 
 You can view previous releases [on Github](https://github.com/connorslade/mslicer/releases).
+
+## v0.7.0 &mdash; May 7th, 2026
+
+- Optimize slicing complex layers
+- Allow clicking models in the viewport to select them
+- Rerender annotations when updated (island detection finishes)
+- Allow dragging to reorder models in Models panel
+- Automatic support generation progress
+- Internal exposure test tool
+- Remote print preferred service ports
+- Remote print will use limited broadcast by default to find printers on the network
+- Remote print default broadcast address changed to `255.255.255.255`
+- Fix crash on macOS (Observed on macOS Sequoia on a laptop with a touch bar)
+- Separate slicing from layer encoding
+- Native 3D anti-aliasing!
+  - Uses supersampling anti-aliasing (SSAA)
+  - Replaces the old AA post processing effect
+- Fix scanning for printers never ending on linux
+- Select save format when exporting, not before slicing
+- Modify printer presets within mslicer
+- Optimized tools with new slicer/encoder separation
+- Fix light direction calculation with nonzero target point
+- Encode file in async task
+- Fix crash when slicing without ever seeing workspace
+- Send custom webhooks on print completion
+- Customable exposure delay
+- Correctly interpolate between first and normal layer exposures in transition layers
 
 ## v0.6.0 &mdash; March 23rd, 2026
 

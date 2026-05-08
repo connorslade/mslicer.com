@@ -42,8 +42,6 @@ Anti-aliasing (AA) reduces the stair-stepping caused by the discrete pixels and 
 Most slicers only implement XY-AA which increases the effective resolution in those axes; however this is getting less important with higher pixel density printers coming out.
 mslicer can apply anti-aliasing across all three axes, smoothing visible layer lines.
 
-> Note that this feature is currently only available in the <a href="#:~:text=Development Builds,-the">development builds</a>.
-
 ### Remote Print
 
 Inside of mslicer you can connect to any Chitu-mainboard printers on your network and remotely start and monitor prints.
@@ -67,7 +65,7 @@ The latest stable version [v{{config(key='version')}}](/docs/changelog), was rel
     <div>
         <h4><img src="icons/windows-logo-fill.svg">Windows</h4>
         <ul>
-            <li><a href="https://github.com/connorslade/mslicer/releases/download/{{ config(key='version') }}/mslicer-x86_64-pc-windows-gnu.exe">Binary (x64)</a></li>
+            <li><a href="https://github.com/connorslade/mslicer/releases/download/{{ config(key='version') }}/mslicer-x86_64-pc-windows-msvc.exe">Binary (x64)</a></li>
         </ul>
     </div>
     <div>
@@ -81,8 +79,7 @@ The latest stable version [v{{config(key='version')}}](/docs/changelog), was rel
 
 ### Development Builds
 
-<!-- todo: Replace ?query=branch%3Amain%20is%3Asuccess -->
-The latest development builds are available for Linux, Windows, and MacOS on [Github Actions](https://github.com/connorslade/mslicer/actions/workflows/build.yml?query=is%3Asuccess).
+The latest development builds are available for Linux, Windows, and MacOS on [Github Actions](https://github.com/connorslade/mslicer/actions/workflows/build.yml?query=branch%3Amain%20is%3Asuccess).
 Just open the workflow run and download the correct artifact for your system.
 
 ### From Source
