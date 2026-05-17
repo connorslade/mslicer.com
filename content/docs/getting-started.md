@@ -20,7 +20,7 @@ For now, you can load the built-in test model (the [Utah Teapot](https://en.wiki
 
 To move around the viewport, scroll to move towards or away from the target point, drag with left click to orbit the target point, and drag with right click to translate the target point.
 Each model in your project is listed in the `Models` panel.
-By clicking the arrow button next to a model, you can access all its properties, including size, position, and rotation, as well as run actions like deleting the model or aligning it to the bed.
+By clicking a model in the 3D view or the models panel, you can access all its properties, including size, position, and rotation, as well as run actions like deleting the model or aligning it to the bed.
 
 Since mslicer's automatic and manual support placement features are still under development and not usable for most models, use the method described in the [Support Placement](/docs/support-placement) page.
 
