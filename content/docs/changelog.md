@@ -6,6 +6,34 @@ date: 2026-05-07
 
 You can view previous releases [on Github](https://github.com/connorslade/mslicer/releases).
 
+## v0.8.0 &mdash; June 30th, 2026
+
+- Fix 'First Layers' setting disappearing
+- Don't send print completion alert on connection
+- Remote print UI refresh
+- Show when remote printer is disconnected
+- PCB tool
+  - Load and rasterize gerber files to expose photoresist
+  - Flip over an arbitrary axis
+- Load multiple models at once through file dialog
+- Exposure remapping
+- Send print completion notifs from async thread
+  - This fixes them not being sent when the ui isn't getting continuously
+    rendered like when the window is not visible on some linux systems
+- Allow picking slice preview coordinate space (screen space or world space)
+- Automatic model layout
+  - Quick layout &mdash; Single pass when models don't have to be packed densely
+  - Advanced layout &mdash; Uses simulated annealing to find better layouts
+- Slice preview view direction selector (lcd screen vs build plate)
+- Support for Spacenav input (3Dconnexion 3D input device)
+- Initial camera distance increased
+- Fix model properties getting pushed off screen by lots of model entries
+- Create model collections for organization
+- Split mesh with multiple shells into separate models
+- Selection keyboard shortcuts
+  - Like when you have selected a model, you can press D to delete it, or R to rename it
+- Select old text when renaming model
+
 ## v0.7.0 &mdash; May 7th, 2026
 
 - Optimize slicing complex layers
