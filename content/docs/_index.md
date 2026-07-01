@@ -12,9 +12,11 @@ description: mslicer documentation pages.
 - [Repairing Non-Manifold Meshes](non-manifold-meshes) &mdash; What to do if you get the non-manifold mesh warning
 - [msla Format Icons (Linux)](msla-thumbs) &mdash; KDE plugin for slided MSLA file icons
 - [Benchmark](benchmark) &mdash; Speed comparison with other slicers
+- [PCB Photolighography](pcb-photolighography) &mdash; Exposing photoresist and soldermask with a MSLA printer
 
 ## Miscellaneous
 
+<!--- [Features](features) &mdash; Overview of mslicer's more interesting features-->
 - [History](history) &mdash; Why I started this project
 - [Changelog](changelog) &mdash; Changelogs for the stable releases
 

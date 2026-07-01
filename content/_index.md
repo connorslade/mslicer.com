@@ -20,6 +20,7 @@ Compatible with printers that support any of the following file formats: Chitu (
 ## Features
 
 mslicer is still in development and is not yet at feature parity with commercial slicers, there is still work to be done on support structure generation.
+But here are a few of the features that make mslicer unique, see [Features](/docs/features) for a more complete overview.
 
 ### Open Source and Private
 

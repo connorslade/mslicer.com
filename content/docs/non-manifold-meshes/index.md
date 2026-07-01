@@ -29,3 +29,4 @@ I have generally had better luck with the paid tools (they have free trials), bu
 - [MeshLab](https://www.meshlab.net)
 - [Mesh Repair Tools](https://extensions.blender.org/add-ons/mesh-repair-tools) (Blender Addon)
 - [Runebrace](https://www.tarabella.it/Runebrace)
+- [Freecad](https://www.freecad.org) ([Mesh Evaluation](https://wiki.freecad.org/Mesh_Evaluation))
