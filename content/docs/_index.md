@@ -10,15 +10,15 @@ description: mslicer documentation pages.
 - [Getting Started](getting-started) &mdash; A brief introduction to mslicer (start here)
 - [Support Placement](support-placement) &mdash; Recommended method for adding supports to models before printing
 - [Repairing Non-Manifold Meshes](non-manifold-meshes) &mdash; What to do if you get the non-manifold mesh warning
+- [PCB Photolighography](pcb-photolighography) &mdash; Exposing photoresist and soldermask with a MSLA printer **(NEW!)**
 - [msla Format Icons (Linux)](msla-thumbs) &mdash; KDE plugin for slided MSLA file icons
-- [Benchmark](benchmark) &mdash; Speed comparison with other slicers
-- [PCB Photolighography](pcb-photolighography) &mdash; Exposing photoresist and soldermask with a MSLA printer
 
 ## Miscellaneous
 
 <!--- [Features](features) &mdash; Overview of mslicer's more interesting features-->
-- [History](history) &mdash; Why I started this project
+- [Benchmark](benchmark) &mdash; Speed comparison with other slicers
 - [Changelog](changelog) &mdash; Changelogs for the stable releases
+- [History](history) &mdash; Why I started this project
 
 ## Developers
 

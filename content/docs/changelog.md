@@ -4,6 +4,8 @@ description: History of mslicer releases.
 date: 2026-05-07
 ---
 
+I try to make a release approximately monthly when I'm working on the project.
+
 You can view previous releases [on Github](https://github.com/connorslade/mslicer/releases).
 
 ## v0.8.0 &mdash; June 30th, 2026
