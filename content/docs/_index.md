@@ -27,3 +27,11 @@ description: mslicer documentation pages.
 - [Remote Print HTTP Status Proxy](remote-print-proxy) &mdash; Remotely monitor your print progress
 - [msla_format](msla-format) &mdash; Library for encoding and decoding common MSLA file formats.
 - [goo](goo) &mdash; Deprecated library for for encoding and decoding Elegoo .goo files
+
+<style>
+@media(max-width: 750px) {
+    body {
+        text-align: left;
+    }
+}
+</style>

@@ -100,7 +100,7 @@ I think this is because it underexposes the edges of traces, somewhat compensati
 Position your copper clad on the printer and start the print job.
 
 </div>
-<img src="/docs/pcb-photolighography/pcb-tool.png" style="width: inherit; height: inherit;"></img>
+<img src="/docs/pcb-photolighography/pcb-tool.png" id="pcb-tool" style="width: inherit; height: inherit;"></img>
 </div>
 
 ### Double Sided Boards
@@ -163,7 +163,17 @@ Here are some links to other pages with good information on this topic:
     }
 
     @media(max-width: 750px) {
+    }
+}
+
+@media(max-width: 750px) {
+    .row {
         display: block;
+    }
+    
+    #pcb-tool {
+        width: 100% !important;
+        height: 100% !important;
     }
 }
 </style>

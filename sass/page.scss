@@ -5,6 +5,10 @@
     margin-top: 21.44px;
     margin-bottom: 21.44px;
 
+    @media (max-width: 750px) {
+        display: block;
+    }
+
     & > h1,
     & > p {
         margin: 0;
