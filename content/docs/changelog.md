@@ -1,7 +1,7 @@
 ---
 title: Changelogs
 description: History of mslicer releases.
-date: 2026-05-07
+date: 2026-06-30
 ---
 
 I try to make a release approximately monthly when I'm working on the project.

@@ -1,7 +1,7 @@
 ---
 title: PCB Photolighography
 description: Exposing photoresist and soldermask with a MSLA printer
-date: 2026-06-30
+date: 2026-07-05
 ---
 
 <link
@@ -117,7 +117,7 @@ To calibrate, tape a piece of the photoresist film to the bottom of it and creat
 You can then measure the position and rotational offset and enter that into the PCB tool.
 
 </div>
-<img src="/docs/pcb-photolighography/axis.png" style="border-radius: 0;"></img>
+<img src="/docs/pcb-photolighography/axis.png" style="border-radius: 0; max-width: 250px;"></img>
 </div>
 
 The flip axis is defined starting at the flip alignment (alignment setting in the flip dropdown) and extending at the set angle (which is relative to the positive X axis).
@@ -135,7 +135,7 @@ It's a milled sheet of 2 mm thick acrylic with five interior holes.
 The center hole is for the PCB to fit into, and the surrounding holes are for 3D printed inserts that fit into the alignment holes on my printer (a Saturn 3 Ultra).
 I have a few of these jigs for different sizes of PCB.
 
-<div class="row" style="gap: 1em;">
+<div class="row" id="jig-imgs" style="gap: 1em;">
     <img src="/docs/pcb-photolighography/alignment-jig.svg"></img>
     <img src="/docs/pcb-photolighography/jig-on-printer.jpg"></img>
 </div>
@@ -161,9 +161,10 @@ Here are some links to other pages with good information on this topic:
         width: 100%;
         height: 100%;
     }
+}
 
-    @media(max-width: 750px) {
-    }
+#jig-imgs > img {
+    width: 50%;
 }
 
 @media(max-width: 750px) {
@@ -174,6 +175,10 @@ Here are some links to other pages with good information on this topic:
     #pcb-tool {
         width: 100% !important;
         height: 100% !important;
+    }
+
+    #jig-imgs > img {
+        width: 100%;
     }
 }
 </style>
