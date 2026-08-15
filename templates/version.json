@@ -1,0 +1,4 @@
+{
+  "version": "{{ config.extra.version }}",
+  "release_date": "{{ config.extra['release-date'] }}"
+}
