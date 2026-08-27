@@ -8,7 +8,7 @@ Compatible with printers that support any of the following file formats: Chitu (
 
 <div class="screenshots">
     <img src="supported-dragon.png" id="s-1" fetchpriority=high />
-    <img src="frog.png" id="s-2" />
+    <img src="pcb.png" id="s-2" />
     <img src="about.png" id="s-3" />
     <div class="screenshot-selector">
         <label><input type="radio" name="screenshot" id="sb-1" checked /></label>
