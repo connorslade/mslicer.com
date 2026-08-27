@@ -1,0 +1,1 @@
+ssh connorcode@connorslade.com "sudo -S cat /mnt/block/analytics/mslicer-version.log | jq -c '{"time":.ts,"ip":.request.remote_ip,"version":.version,"os":.operating_system,"freq":.check_freq}'" | sed '1d; s/}$/},/' | sed '1i\[' | sed '$a\]'  > analytics.json
