@@ -16,6 +16,7 @@ description: mslicer documentation pages.
 ## Miscellaneous
 
 <!--- [Features](features) &mdash; Overview of mslicer's more interesting features-->
+- [Release Notes](release-notes) &mdash; Overview of the biggest changes in a release **(NEW!)**
 - [Benchmark](benchmark) &mdash; Speed comparison with other slicers
 - [Changelog](changelog) &mdash; Changelogs for the stable releases
 - [History](history) &mdash; Why I started this project

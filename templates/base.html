@@ -7,7 +7,7 @@
         <link rel="preload" href="/icons/mslicer.svg" as="image" type="image/svg+xml" />
         <link rel="icon" href="/icons/mslicer.ico" />
         <link rel="stylesheet" href="/main.css" />
-        
+
         {% block header %} {% endblock header %}
     </head>
     <body>
@@ -30,7 +30,7 @@
         <hr />
 
         <footer>
-            <a href="https://connorslade.com">Connor Slade</a> ∙ {{ now() | date(format="%B %Y") }}
+            Human written, by <a href="https://connorslade.com">Connor Slade</a> ∙ {{ now() | date(format="%B %Y") }}
             {% if config.extra.commit %}
                 (<a href="https://github.com/connorslade/mslicer.com/tree/{{ config.extra.commit }}">{{ config.extra.commit }}</a>)
             {% endif %}

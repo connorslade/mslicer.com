@@ -1,6 +1,6 @@
 base_url = "https://mslicer.com"
 title = "mslicer"
-description = "A high-performance, open-source slicer for MSLA resin printers."
+description = "A high-performance, open-source slicer for MSLA resin printers. Compatible with printers that support any of the following file formats: Chitu (.ctb), Elegoo (.goo), or NanoDLP (.nanodlp)."
 author = "Connor Slade"
 
 minify_html = true
@@ -15,5 +15,5 @@ theme = "min-light"
 commit = ""
 
 # Latest release
-version = "0.8.0"
-release-date = "June 30th, 2026"
+version = "0.9.0"
+release-date = "August 26th, 2026"

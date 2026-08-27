@@ -1,12 +1,48 @@
 ---
 title: Changelogs
 description: History of mslicer releases.
-date: 2026-06-30
+date: 2026-08-26
 ---
 
 I try to make a release approximately monthly when I'm working on the project.
 
 You can view previous releases [on Github](https://github.com/connorslade/mslicer/releases).
+
+## v0.9.0 &mdash; August 26th, 2026
+
+- PCB Tool: Pre and post flip offsets
+- Toy rasterizer (3d renderer) for some reason /shrug
+- Variable layer height (#23)
+- Side panel keeps constant width when resizing the viewport
+- Add lots more printer presets for Elegoo and Phrozen printers
+- Support generation progress
+  - Prune auto-generated supports with min distance constraint
+  - Allow placing supports manually
+- Add anti-aliasing to slice preview
+- Reduce output file size (Reported by Jens Holländer)
+- Remote Print now supports SDCP V3.0.0 for newer printers
+- Allow loading previously sliced files for inspection
+- Convert sliced files back into meshes
+- Rename 'Slice Operation' window to 'Sliced'
+- Sliced window sidebar
+  - Allow changing exposure settings after slicing or to previously sliced files
+  - View and edit preview images
+  - Show layer surface area plot
+  - Edit exposure config
+- Update config format
+- Rewrite model rendering pipeline
+  - Added ambient occlusion
+- Optional automatic update checking
+- Allow selecting what units your mesh uses
+- Add basis vector gizmo
+- Support opening into projects, sliced files, and meshes
+- Tweak Spacenav controls
+- Register file associations
+- Windows installer
+- More robust slicing!
+- Fix crash when slicing to different resolutions in the same session
+- Lag free slice preview scrubbing (layer data is decompressed on the gpu)
+- Add buttons to reload or replace a model
 
 ## v0.8.0 &mdash; June 30th, 2026
 
