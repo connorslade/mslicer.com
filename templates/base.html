@@ -8,6 +8,14 @@
         <link rel="icon" href="/icons/mslicer.ico" />
         <link rel="stylesheet" href="/main.css" />
 
+        <link rel="canonical" href="{{ current_url | default(value=config.base_url) }}" />
+        <meta property="og:type" content="website" />
+        <meta property="og:site_name" content="mslicer" />
+        <meta property="og:url" content="{{ current_url | default(value=config.base_url) }}" />
+        <meta property="og:image" content="{{ config.base_url }}/supported-dragon.png" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:image" content="{{ config.base_url }}/supported-dragon.png" />
+
         {% block header %} {% endblock header %}
     </head>
     <body>

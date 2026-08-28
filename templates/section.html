@@ -4,18 +4,54 @@
     <link rel="stylesheet" href="/index.css" />
     <meta name="description" content="{{ section.description }}" />
     <meta property="og:description" content="{{ section.description }}" />
-    
+    <meta name="twitter:description" content="{{ section.description }}" />
+
     {% if section.title %}
-        <meta property="og:title" content="{{ section.title }}" />
+        <meta property="og:title" content="{{ section.title }} &mdash; mslicer" />
+        <meta name="twitter:title" content="{{ section.title }} &mdash; mslicer" />
         <title>{{ section.title }} &mdash; mslicer</title>
     {% else %}
-        <meta property="og:title" content="mslicer" />
-        <title>mslicer</title>
+        <title>mslicer — Open Source Resin Slicer</title>
+        <meta property="og:title" content="mslicer — Open Source Resin Slicer" />
+        <meta name="twitter:title" content="mslicer — Open Source Resin Slicer" />
+    {% endif %}
+
+    {% if current_path == "/" %}
+        <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "SoftwareApplication",
+            "name": "mslicer",
+            "url": "{{ config.base_url }}/",
+            "description": "{{ section.description }}",
+            "applicationCategory": "DesignApplication",
+            "operatingSystem": "Linux, Windows, macOS",
+            "softwareVersion": "{{ config.extra.version }}",
+            "license": "https://www.gnu.org/licenses/gpl-3.0.html",
+            "offers": {
+                "@type": "Offer",
+                "price": "0",
+                "priceCurrency": "USD"
+            },
+            "aggregateRating": {
+              "@type": "AggregateRating",
+              "ratingValue": 3.4,
+              "ratingCount": 2
+            },
+            "downloadUrl": "https://mslicer.com",
+            "codeRepository": "https://github.com/connorslade/mslicer",
+            "author": {
+                "@type": "Person",
+                "name": "Connor Slade",
+                "url": "https://connorslade.com"
+            }
+        }
+        </script>
     {% endif %}
 {% endblock header %}
 
 {% block content %}
-    <h1>{{ section.title }}</h1>
+    {% if section.title %}<h1>{{ section.title }}</h1>{% endif %}
 
     {{ section.content | safe}}
 {% endblock content %}

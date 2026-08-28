@@ -1,5 +1,5 @@
 ---
-description: A high-performance, open-source slicer for MSLA resin printers.
+description: Free, open-source slicer for MSLA resin 3D printers. Up to 120x faster than ChiTuBox and Lychee. Supports Chitu, Elegoo, and NanoDLP. Linux, Windows, macOS.
 template: section.html
 ---
 
