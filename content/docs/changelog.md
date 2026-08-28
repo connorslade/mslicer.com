@@ -1,12 +1,23 @@
 ---
 title: Changelogs
 description: History of mslicer releases.
-date: 2026-08-26
+date: 2026-08-27
 ---
 
 I try to make a release approximately monthly when I'm working on the project.
 
 You can view previous releases [on Github](https://github.com/connorslade/mslicer/releases).
+
+## v0.9.1 &mdash; August 28th, 2026
+
+- Fix preview image GPU memory leak
+- Fix ⌘+A selecting all models when editing a text box
+- Improve ambient occlusion calculations and config
+- Fix triangle render style (sometimes neighboring faces would be colored the same)
+- Allow reducing ambient occlusion render resolution
+- Fix model color changing slightly when opened in the model panel
+- Fix crash from config directory not being created
+- Better ambient occlusion defaults
 
 ## v0.9.0 &mdash; August 26th, 2026
 
