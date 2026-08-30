@@ -47,7 +47,7 @@ Windows releases are distributed as plain `.exe` files that function as both an 
 The first time you run it, you will see a dialog box (screenshot below) asking if you want to install or just run.
 As it says in the dialog, installing will add to the Start menu and register file associations.
 
-<img src="/docs/getting-started/install-windows.png" style="width: inherit; border-radius: 0;" />
+<img src="/docs/getting-started/install-windows.png" style="width: inherit; max-width: 100%; border-radius: 0;" />
 
 If you choose to run portably and later decide to install it, you can do so through the `File › Misc › Install` button.
 
@@ -196,7 +196,7 @@ Faces is the number of triangles that make up the mesh, and volume is the volume
 Mesh warnings appear as a small warning icon by the model name in the `Models` panel.
 There are currently two warnings.
 
-<img src="/docs/getting-started/model-warnings.png" style="width: inherit; border-radius: 0;" />
+<img src="/docs/getting-started/model-warnings.png" style="width: inherit; max-width: 100%; border-radius: 0;" />
 
 - **Non Manifold Meshes** &mdash; The mesh is invalid and may produce unexpected results when slicing. See the [Models](#models) section for more details.
 - **Out of Bounds** &mdash; The model extends beyond the printer's build volume and will be cut off.
@@ -228,7 +228,7 @@ The 'Normal Layers' and 'First Layer' exposure configurations have the same prop
 - **Retract** &mdash; Has the same distance as lift, possibly a different speed.
 
 </div>
-<img src="/docs/getting-started/slice-config.png" style="width: inherit;" />
+<img src="/docs/getting-started/slice-config.png" class="inherit" />
 </div>
 
 Exposure remapping lets you define a curve (using Bézier handles) that maps exposure values.
@@ -242,7 +242,7 @@ If your printer is not one of the default presets, you can create your own!
 Feel free to also make a GitHub issue to get your printer config added to the default.
 Open the preset edit window with the pencil icon next to the printer setting in `Slice Config`.
 
-<img src="/docs/getting-started/custom-preset.png" style="width: inherit;" />
+<img src="/docs/getting-started/custom-preset.png" class="inherit" />
 
 Here you can create new presets, delete them, change their names, and, of course, configure their build volume and resolution.
 
@@ -259,7 +259,7 @@ It looks pretty good for being downsampled so much (20× at coarse), but you can
 Do note that since every voxel can create multiple triangles in the reconstructed mesh, the poly count will be enormous even at lower fidelity. This example resulted in over 3.3M faces.
 
 </div>
-<img src="/docs/getting-started/reconstructed-mesh.png" style="width: 30%;" />
+<img src="/docs/getting-started/reconstructed-mesh.png" />
 </div>
 
 ### Spacenav
