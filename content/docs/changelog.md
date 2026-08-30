@@ -8,6 +8,30 @@ I try to make a release approximately monthly when I'm working on the project.
 
 You can view previous releases [on Github](https://github.com/connorslade/mslicer/releases).
 
+## v0.9.2 &mdash; August 30th, 2026
+
+- Allow ignoring updates to stop the notification on every launch
+- Update flatpak banding color
+- Track history state on more values
+- Show all history actions to undo to
+- Change tag naming scheme (0.1.0 → v0.1.0)
+- Remote Print now supports SDCP V3.0.0 for newer printers
+- Unify remote print status proxy to all versions ([#36](https://github.com/connorslade/mslicer/issues/36))
+- Fix remote print initialize at startup
+- Fix http status proxy checkbox
+- Fix being unable to start new remote print after stopping one
+- Allow stopping prints through remote print V1
+- Avoid showing noting under remote print printer
+- Remove ansi color codes from log file
+- Rename log file from `mslicer.log` to `latest.log`
+- Switch to full host filesystem access through flatpak. Needed because of an unfortunate change to xdg-desktop-portal.
+- Update flatpak description
+- Ask if you want to save your project when overwriting it (creating new project, loading a new project)
+- Only create mesh acceleration structures once per mesh, not per instance
+- Fix rendering of 'Send to Printer' menu
+- Add 'Help' menu to toolbar (has links to website, source code, and bug tracker)
+- Don't trigger model shortcuts when typing in a text field
+
 ## v0.9.1 &mdash; August 28th, 2026
 
 - Fix preview image GPU memory leak
@@ -16,7 +40,7 @@ You can view previous releases [on Github](https://github.com/connorslade/mslice
 - Fix triangle render style (sometimes neighboring faces would be colored the same)
 - Allow reducing ambient occlusion render resolution
 - Fix model color changing slightly when opened in the model panel
-- Fix crash from config directory not being created
+- Fix crash from config directory not being created ([#35](https://github.com/connorslade/mslicer/issues/35))
 - Better ambient occlusion defaults
 
 ## v0.9.0 &mdash; August 26th, 2026
@@ -31,7 +55,6 @@ You can view previous releases [on Github](https://github.com/connorslade/mslice
   - Allow placing supports manually
 - Add anti-aliasing to slice preview
 - Reduce output file size (Reported by Jens Holländer)
-- Remote Print now supports SDCP V3.0.0 for newer printers
 - Allow loading previously sliced files for inspection
 - Convert sliced files back into meshes
 - Rename 'Slice Operation' window to 'Sliced'

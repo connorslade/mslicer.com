@@ -38,7 +38,7 @@
         <hr />
 
         <footer>
-            Human written, by <a href="https://connorslade.com">Connor Slade</a> ∙ {{ now() | date(format="%B %Y") }}
+            <span title="people can write em dashes too 😭">Human written</span>, by <a href="https://connorslade.com">Connor Slade</a> ∙ {{ now() | date(format="%B %Y") }}
             {% if config.extra.commit %}
                 (<a href="https://github.com/connorslade/mslicer.com/tree/{{ config.extra.commit }}">{{ config.extra.commit }}</a>)
             {% endif %}

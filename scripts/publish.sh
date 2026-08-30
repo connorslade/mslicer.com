@@ -3,9 +3,12 @@
 # Build site with correct commit hash
 sed -i "s/^commit = \"\"/commit = \"$(git rev-parse --short HEAD)\"/" zola.toml
 zola build
+git restore zola.toml
+
+# Modifications to support version.json
 mv public/version/index.html public/version.json
 rm -r public/version/
-git restore zola.toml
+sed -zi 's/[[:space:]]*<url>[[:space:]]*<loc>[^<]*\/version\/<\/loc>.*\?<\/url>//g' public/sitemap.xml
 
 # Upload to server
 ssh connorcode@connorslade.com "rm -rf /mnt/block/static/mslicer.com/*"

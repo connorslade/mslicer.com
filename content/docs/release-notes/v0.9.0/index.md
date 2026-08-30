@@ -132,21 +132,3 @@ Until now all sliced outputs were a tiny bit bigger than the should have been be
 
 If you installed mslicer through the flatpak on Linux, due to incorrect permissions remote print and spacenav support would not work.
 This has now been fixed. Sorry!
-
-<style>
-.row {
-    display: flex;
-    gap: 2em;
-
-    & > img, video {
-        width: 100%;
-        height: 100%;
-    }
-}
-
-@media(max-width: 750px) {
-    .row {
-        display: block;
-    }
-}
-</style>

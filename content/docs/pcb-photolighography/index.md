@@ -15,7 +15,7 @@ href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/regular/style.c
 
 Prototyping PCBs with a professional Fab can take weeks per iteration, in some cases this is fine, but you can make your own in under an hour at home!
 The two main ways to make a PCB are CNC milling and etching.
-This article is about etching and how the traditional method can be improved with a MSLA printer (and mslicer of course).
+This document is about etching and how the traditional method can be improved with a MSLA printer (and mslicer of course).
 
 On the right is a video of one of the simpler PCBs I've made; it's a VU-meter style audio visualizer.
 I will use it as an example in the later sections.
@@ -153,25 +153,11 @@ Here are some links to other pages with good information on this topic:
 <!---->
 
 <style>
-.row {
-    display: flex;
-    gap: 2em;
-
-    & > img, video {
-        width: 100%;
-        height: 100%;
-    }
-}
-
 #jig-imgs > img {
     width: 50%;
 }
 
 @media(max-width: 750px) {
-    .row {
-        display: block;
-    }
-    
     #pcb-tool {
         width: 100% !important;
         height: 100% !important;

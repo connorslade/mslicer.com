@@ -14,3 +14,13 @@
         margin: 0;
     }
 }
+
+.row {
+    display: flex;
+    gap: 2em;
+
+    & > img, video {
+        width: 100%;
+        height: 100%;
+    }
+}

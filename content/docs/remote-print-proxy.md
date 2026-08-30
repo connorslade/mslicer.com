@@ -1,12 +1,12 @@
 ---
 title: Remote Print HTTP Status Proxy
 description: An introduction to mslicer, the open source MSLA resin slicer.
-date: 2025-02-16
+date: 2026-08-29
 ---
 
-Part of the process to upload a model to a printer with remote print is to serve the `.goo` file on an HTTP server, then send the download link to the printer over MQTT.
+Part of the process to upload a model to a printer with remote print (for the now legacy protocol) is to serve the sliced file on an HTTP server, then send the download link to the printer over MQTT.
 Because remote print already has to run an HTTP server, this option exposes an API at `0.0.0.0:<http_port>/status`.
-Each time remote print starts, all server ports are randomized and printed to the log (check the console or the Log panel).
+Unless you set defaults, each time remote print starts all server ports are randomized, their values can been seen and set in the 'Services' section of the 'Remote Print' panel.
 
 ### Scriptable Widget
 
@@ -22,68 +22,28 @@ Just make a new script in the app, paste the code in, and then you can make a Sc
 
 The status route returns a JSON array of printers, each with the following format.
 
-```
-struct Printer {
-  machineId: String,
-  attributes: Attributes,
-  status: Status,
-  lastUpdate: i64,
-}
-```
-
-The `Attributes` structure is passed directly from the printer's initial handshake message.
-I'm honestly not sure what all the fields are for.
-
-```
-struct Attributes {
-  Name: String,
-  MachineName: String,
-  ProtocolVersion: String,
-  FirmwareVersion: String,
-  Resolution: Resolution,
-  MainboardIP: String,
-  MainboardID: String,
-  SDCPStatus: u8,
-  LocalSDCPAddress: String,
-  SDCPAddress: String,
-  Capabilities: Capability[],
-}
-
-enum Capability {
-  FILE_TRANSFER,
-  PRINT_CONTROL
-}
-```
-
-Finally, this data is sent from the printer over MQTT every few seconds.
-
-```
-struct Status {
-  CurrentStatus: CurrentStatus,
-  PreviousStatus: u8,
-  PrintInfo: PrintInfo,
-  FileTransferInfo: FileTransferInfo,
-}
-
-enum CurrentStatus {
-  Ready,
-  Busy,
-  TransferringFile
-}
-
-enum PrintInfoStatus {
-  None,
-  InitialLower,
-  Lowering,
-  Exposure,
-  Retracting,
-  FinalRetract,
-  Complete
-}
-
-enum FileTransferStatus {
-  None,
-  Done,
-  Error
+```json
+{
+  "LastUpdate": integer,
+  "MachineId": string,
+  "Name": string,
+  "PrintInfo": {
+    "CurrentLayer": integer,
+    "CurrentTicks": integer,
+    "ErrorNumber": integer,
+    "Filename": string,
+    "Status": "None" | "InitialLower" | "Lowering" | "Exposure" | "Retracting" | "Pausing" | 
+              "Paused" | "Stopping" | "Stopped" | "Complete" | "FinalRetract" | "Canceled",
+    "TotalLayer": integer,
+    "TotalTicks": integer
+  },
+  "ProtocolVersion": "V1" | "V3",
+  "TransferInfo": {
+    "CheckOffset": integer,
+    "DownloadOffset": integer,
+    "FileTotalSize": integer,
+    "Filename": string,
+    "Status": "None" | "Done" | "Error"
+  }
 }
 ```

@@ -4,7 +4,7 @@ description: Why I started mslicer, the open-source resin slicer
 date: 2026-02-25
 ---
 
-> This article is a combination of explanation why I started this project and some ramblings on interesting problems I had to solve while working on it.
+> This document is a combination of explanation why I started this project and some ramblings on interesting problems I had to solve while working on it.
 
 June of 2024 I got access to an [ELEGOO Saturn 3 Ultra](https://www.elegoo.com/products/elegoo-saturn-3-ultra-resin-3d-printer-12k) resin printer, but was disappointed with the selection of slicers.
 From what I found, the main choices were [Chitubox](https://chitubox.com/), [VoxelDance Tango](https://voxeldance.com/Tango), and [Lychee](https://mango3d.io/), none of which are open source and all had other issues.

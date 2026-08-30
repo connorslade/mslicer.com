@@ -58,7 +58,7 @@ The latest stable version [v{{config(key='version')}}](/docs/changelog), was rel
     <div>
         <h4><img src="icons/linux-logo-fill.svg">Linux</h4>
         <ul>
-            <li><a href="https://github.com/connorslade/mslicer/releases/download/{{ config(key='version') }}/mslicer-x86_64-unknown-linux-gnu">Binary (x64)</a></li>
+            <li><a href="https://github.com/connorslade/mslicer/releases/download/v{{ config(key='version') }}/mslicer-x86_64-unknown-linux-gnu">Binary (x64)</a></li>
             <li><a href="https://flathub.org/en/apps/com.connorcode.mslicer">Flathub</a></li>
             <li><a href="https://search.nixos.org/packages?channel=unstable&query=mslicer&show=mslicer">Nixpkgs</a></li>
         </ul>
@@ -66,14 +66,14 @@ The latest stable version [v{{config(key='version')}}](/docs/changelog), was rel
     <div>
         <h4><img src="icons/windows-logo-fill.svg">Windows</h4>
         <ul>
-            <li><a href="https://github.com/connorslade/mslicer/releases/download/{{ config(key='version') }}/mslicer-x86_64-pc-windows-msvc.exe">Binary (x64)</a></li>
+            <li><a href="https://github.com/connorslade/mslicer/releases/download/v{{ config(key='version') }}/mslicer-x86_64-pc-windows-msvc.exe">Binary (x64)</a></li>
         </ul>
     </div>
     <div>
         <h4><img src="icons/apple-logo-fill.svg">MacOS</h4>
         <ul>
-            <li><a href="https://github.com/connorslade/mslicer/releases/download/{{ config(key='version') }}/mslicer-aarch64-apple-darwin.zip">App (Apple Silicon)</a></li>
-            <li><a href="https://github.com/connorslade/mslicer/releases/download/{{ config(key='version') }}/mslicer-x86_64-apple-darwin.zip">App (Intel)</a></li>
+            <li><a href="https://github.com/connorslade/mslicer/releases/download/v{{ config(key='version') }}/mslicer-aarch64-apple-darwin.zip">App (Apple Silicon)</a></li>
+            <li><a href="https://github.com/connorslade/mslicer/releases/download/v{{ config(key='version') }}/mslicer-x86_64-apple-darwin.zip">App (Intel)</a></li>
         </ul>
     </div>
 </div>
