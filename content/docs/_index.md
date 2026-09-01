@@ -7,7 +7,7 @@ description: mslicer documentation pages.
 
 ## User Guides
 
-- [Getting Started](getting-started) &mdash; A brief introduction to mslicer (start here)
+- [Getting Started](getting-started) &mdash; Everything you need to know about mslicer (start here)
 - [Support Placement](support-placement) &mdash; Recommended method for adding supports to models before printing
 - [Repairing Non-Manifold Meshes](non-manifold-meshes) &mdash; What to do if you get the non-manifold mesh warning
 - [PCB Photolighography](pcb-photolighography) &mdash; Exposing photoresist and soldermask with a MSLA printer **(NEW!)**

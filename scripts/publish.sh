@@ -12,4 +12,4 @@ sed -zi 's/[[:space:]]*<url>[[:space:]]*<loc>[^<]*\/version\/<\/loc>.*\?<\/url>/
 
 # Upload to server
 ssh connorcode@connorslade.com "rm -rf /mnt/block/static/mslicer.com/*"
-scp -r public/* connorcode@connorslade.com:/mnt/block/static/mslicer.com/
+scp -r public/* connorcode@connorslade.com:/mnt/block/static/mslicer.com/ # todo: use rsync

@@ -1,7 +1,7 @@
 ---
 title: Getting Started
 description: A brief introduction to mslicer, the open source MSLA resin slicer.
-date: 2026-08-30
+date: 2026-09-01
 ---
 
 Welcome to mslicer!
@@ -24,6 +24,7 @@ If you run into any bugs or just have feature requests, please don't hesitate to
   - [Model Properties](#model-properties)
   - [Model Warnings](#model-warnings)
   - [Slice Config](#slice-config)
+  - [Advanced Layout](#advanced-layout)
   - [Custom Presets](#custom-presets)
   - [Mesh Reconstruction](#mesh-reconstruction)
   - [Spacenav](#spacenav)
@@ -80,6 +81,7 @@ You can also switch between the default perspective camera and an orthographic c
 
 Each model in your project is listed in the `Models` panel.
 By clicking a model in the 3D view or the Models panel, you can access all its properties, including size, position, and rotation, as well as run actions like deleting the model or aligning it to the bed (see [Model Properties](#model-properties) for a complete description).
+The recommended way to position multiple models in a workspace is with 'Auto Layout', either quick layout, `Ctrl+L` (`⌘+L` on Mac) or with the [Advanced Layout](#) tool.
 
 Since mslicer's automatic and manual support placement features are still under development and not usable for most models, use the method described in the [Support Placement](/docs/support-placement) page.
 
@@ -228,13 +230,41 @@ The 'Normal Layers' and 'First Layer' exposure configurations have the same prop
 - **Retract** &mdash; Has the same distance as lift, possibly a different speed.
 
 </div>
-<img src="/docs/getting-started/slice-config.png" class="inherit" />
+
+![](slice-config.png)
+
 </div>
 
 Exposure remapping lets you define a curve (using Bézier handles) that maps exposure values.
 This can be useful when using anti-aliasing since fractional exposure values don't necessarily correspond linearly to voxel growth.
 
 There are also some additional postprocessors that I won't get into here: Variable Layer Height and the (legacy) Elephant Foot Fixer.
+
+### Advanced Layout
+
+<div class="row">
+<div>
+
+The quick layout tool (`Tools › Quick Layout`) runs a single pass of the layout algorithm, which works in simple cases, but it probably won't find an optimal layout with lots of models.
+For that reason there is also `Tools > Advanced Layout`, which runs multiple layout passes using different settings with {{details(body="simulated annealing", desc="A technique for approximating the global optima of a (usually discrete) state space.")}}.
+
+With this tool, you set your parameters, click 'Start', and watch the model positions update until you are satisfied with the result; then you can click 'Stop' or just close the popup.
+
+- **Objective** &mdash; The function to minimize, either 'Area', 'Perimeter', or 'Longest Axis'.
+- **Rotation** &mdash; What kinds of rotation are allowed: either 'Disabled', 'Cardinal' (90° increments), 'Intercardinal' (45° increments), or 'Continuous'.
+  More possible angles make better layouts possible but also increase computation time.
+- **Padding** &mdash; Minimum distance between models.
+- **Segment Steps** &mdash; The number of placements to try per edge of each model's perimeter.
+  Significantly increases computation time; 1 step is usually fine.
+
+</div>
+
+![](advanced-layout.png)
+
+</div>
+
+There is also a dropdown for the simulated annealing meta-parameters, but I won't go into them here.
+The defaults are usually fine.
 
 ### Custom Presets
 

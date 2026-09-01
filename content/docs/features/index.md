@@ -2,6 +2,7 @@
 title: Features
 description: Overview of mslicer's more interesting features
 date: 2026-08-27
+hidden: true
 ---
 
 I haven't finished this document yet...
