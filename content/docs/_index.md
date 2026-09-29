@@ -11,6 +11,7 @@ description: mslicer documentation pages.
 - [Support Placement](support-placement) &mdash; Recommended method for adding supports to models before printing
 - [Repairing Non-Manifold Meshes](non-manifold-meshes) &mdash; What to do if you get the non-manifold mesh warning
 - [PCB Photolighography](pcb-photolighography) &mdash; Exposing photoresist and soldermask with a MSLA printer **(NEW!)**
+- [3D Printing Phonograph Records](phonograph-record) &mdash; Using the power of modern technology to make really bad phonograph records
 - [msla Format Icons (Linux)](msla-thumbs) &mdash; KDE plugin for slided MSLA file icons
 
 ## Miscellaneous

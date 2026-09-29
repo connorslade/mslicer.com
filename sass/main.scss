@@ -36,6 +36,19 @@ pre {
     border-radius: 4px;
 }
 
+table {
+    border-collapse: collapse;
+}
+
+td, th {
+   border: 1px solid black;
+   padding: 0.2em;
+}
+
+th {
+    background: lightgray;
+}
+
 [title] {
     cursor: help;
     text-decoration: underline;

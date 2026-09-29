@@ -289,7 +289,7 @@ It looks pretty good for being downsampled so much (20× at coarse), but you can
 Do note that since every voxel can create multiple triangles in the reconstructed mesh, the poly count will be enormous even at lower fidelity. This example resulted in over 3.3M faces.
 
 </div>
-<img src="/docs/getting-started/reconstructed-mesh.png" />
+<img src="/docs/getting-started/reconstructed-mesh.png" style="max-width: 431px;" />
 </div>
 
 ### Spacenav
