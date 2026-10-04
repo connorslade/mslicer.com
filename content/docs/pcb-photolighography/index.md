@@ -28,9 +28,7 @@ Photoresist is a UV light-sensitive material that, once exposed and developed, l
 There are five main steps to etch a PCB:
 
 </div>
-
-<video src="https://files.connorslade.com/Video/vu-meter.mp4" controls style="height: inherit;"></video>
-
+<video src="https://files.connorslade.com/Video/vu-meter.mp4" controls style="max-width: 350px;"></video>
 </div>
 
 

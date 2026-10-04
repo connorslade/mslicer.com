@@ -147,9 +147,7 @@ You can use a plain text or JSON body with the following formatters: `%file%` fo
 There is also an HTTP status proxy that you can read more about at [Remote Print HTTP Status Proxy](/docs/remote-print-proxy).
 
 </div>
-
-![](remote-print.png)
-
+<img src="/docs/getting-started/remote-print.png" />
 </div>
 
 And that's it 😅.
@@ -175,9 +173,7 @@ In the 'Model' panel there are actions, properties, and some mesh statistics. St
 - **Reload** &mdash; If you loaded a model in the current session, you will also be able to replace it with a new version of the file you loaded. This is useful when iterating on a design. (Not in screenshot)
 
 </div>
-
-![](models.png)
-
+<img src="/docs/getting-started/models.png" />
 </div>
 
 If you select multiple models at the same time by shift-clicking them in either the 3D view or the `Model` panel, the delete, collect, and duplicate actions will still be available.
@@ -230,9 +226,7 @@ The 'Normal Layers' and 'First Layer' exposure configurations have the same prop
 - **Retract** &mdash; Has the same distance as lift, possibly a different speed.
 
 </div>
-
-![](slice-config.png)
-
+<img src="/docs/getting-started/slice-config.png" />
 </div>
 
 Exposure remapping lets you define a curve (using Bézier handles) that maps exposure values.
@@ -258,9 +252,7 @@ With this tool, you set your parameters, click 'Start', and watch the model posi
   Significantly increases computation time; 1 step is usually fine.
 
 </div>
-
-![](advanced-layout.png)
-
+<img src="/docs/getting-started/advanced-layout.png" />
 </div>
 
 There is also a dropdown for the simulated annealing meta-parameters, but I won't go into them here.
