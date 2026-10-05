@@ -1,7 +1,7 @@
 ---
 title: 3D Printing Phonograph Records
 description: Using the power of modern technology to make really bad phonograph records
-date: 2026-09-29
+date: 2026-10-05
 ---
 
 <link
@@ -69,25 +69,27 @@ I find it pretty cool to see a close-up view of what a phonograph record looks l
 <div class="row">
 <div>
 
-Here is a video of my first working test, the song is ["Taxi" by Charli XCX](https://www.youtube.com/watch?v=knTzS1KCjnE).
+Here is a video of my best test so far, the song is ["Taxi" by Charli XCX](https://www.youtube.com/watch?v=knTzS1KCjnE).
 I probably should have used something more recognizable (and not unreleased), but it was just the first `.wav` file I found on my computer.
 
-The quality is... not great, but I think it could be improved by tuning the groove settings and maybe post-processing with an ultrasonic cleaner.
+The quality is... not great, but I think it could be improved by tuning the groove settings more.
 I'll update this document if I get around to that... But I don't want this little side-quest taking up too much of my time.
 
-If you try this yourself, let me know how it turned out!
+If you try this yourself, let me know how it turns out!
 Here are the settings I changed from the defaults, as a starting point:
 
-| Setting       | Value                                                                                                                                                                                    |
-| ------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Slice Height  | 10μm (With {{details(body="Variable Layer Height", desc="Not sure why, but my prints kept failing until I turned this on.\nCombine up to 5 layers to get 50μm layers at the bottom.")}}) |
-| Anti-Aliasing | 125×                                                                                                                                                                                     |
-| Pitch         | 170μm                                                                                                                                                                                    |
-| Normal Layers | 2.0s (<i class="ph ph-clock"></i> 10.0s)                                                                                                                                                 |
-| Bottom Layers | 10.0s (<i class="ph ph-clock"></i> 10.0s)                                                                                                                                                |
+| Setting        | Value                                                                                                                                                                                    |
+| -------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Slice Height   | 10μm (With {{details(body="Variable Layer Height", desc="Not sure why, but my prints kept failing until I turned this on.\nCombine up to 5 layers to get 50μm layers at the bottom.")}}) |
+| Anti-Aliasing  | 125×                                                                                                                                                                                     |
+| Pitch          | 150μm                                                                                                                                                                                    |
+| Playback Speed | 78rpm                                                                                                                                                                                    |
+| Resolution     | 40kHz                                                                                                                                                                                    |
+| Normal Layers  | 2.0s (<i class="ph ph-clock"></i> 10.0s)                                                                                                                                                 |
+| Bottom Layers  | 10.0s (<i class="ph ph-clock"></i> 10.0s)                                                                                                                                                |
 
 </div>
-<video src="https://files.connorslade.com/Video/3d-printed-phonograph-record.webm" controls style="max-width: 431px;"></video>
+<video src="https://files.connorslade.com/Video/3d-printed-phonograph-record-v2.webm" controls style="max-width: 431px;"></video>
 </div>
 
 ## Appendix
