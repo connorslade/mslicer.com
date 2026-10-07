@@ -4,7 +4,7 @@ template: section.html
 ---
 
 A high-performance, open-source slicer for {{details(body="MSLA", desc="Masked stereolithography.\nUses an LCD mask to cure entire layers of resin at once.")}} resin printers.
-Compatible with printers that support any of the following file formats: Chitu (.ctb), Elegoo (.goo), or NanoDLP (.nanodlp).
+Compatible with printers that support any of the following file formats: Chitu (.ctb), Elegoo (.goo), or NanoDLP (.nanodlp). ([See full list](docs/printer-compatibility))
 
 <div class="screenshots">
     <img src="supported-dragon.png" id="s-1" fetchpriority=high />
@@ -19,8 +19,7 @@ Compatible with printers that support any of the following file formats: Chitu (
 
 ## Features
 
-mslicer is still in development and is not yet at feature parity with commercial slicers, there is still work to be done on support structure generation.
-<!--But here are a few of the features that make mslicer unique, see [Features](/docs/features) for a more complete overview.-->
+Here are a few of the features that make mslicer unique! Note that support generation is still a work in progress.
 
 ### Open Source and Private
 
@@ -88,9 +87,8 @@ Just open the workflow run and download the correct artifact for your system.
 If you would rather build from source, just have the latest stable version of the [Rust toolchain](https://rustup.rs/) installed and build the binaries you want (mslicer, slicer) as shown below.
 
 ```bash
-git clone https://github.com/connorslade/mslicer
+git clone https://github.com/connorslade/mslicer --branch v{{ config(key='version') }}
 cd mslicer
-git checkout v{{ config(key='version') }}
 cargo build --release --package mslicer
 ```
 
