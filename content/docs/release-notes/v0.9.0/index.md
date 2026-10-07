@@ -89,8 +89,7 @@ It's size can be configured or it can be completely disabled in the workspace co
 Before adding it, I would often change the wrong position or rotation draggers before getting the right one, and I haven't done that as much since.
 
 </div>
-
-![](basis-vectors.png)
+<img src="/docs/release-notes/v0-9-0/basis-vectors.png" />
 </div>
 
 ### Mesh Handling

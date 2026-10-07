@@ -90,6 +90,7 @@ If you would rather build from source, just have the latest stable version of th
 ```bash
 git clone https://github.com/connorslade/mslicer
 cd mslicer
+git checkout v{{ config(key='version') }}
 cargo build --release --package mslicer
 ```
 
