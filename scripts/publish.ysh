@@ -1,4 +1,6 @@
-#!/bin/bash
+#!/usr/bin/ysh
+
+source .env
 
 # Build site with correct commit hash
 sed -i "s/^commit = \"\"/commit = \"$(git rev-parse --short HEAD)\"/" zola.toml
@@ -11,5 +13,5 @@ rm -r public/version/
 sed -zi 's/[[:space:]]*<url>[[:space:]]*<loc>[^<]*\/version\/<\/loc>.*\?<\/url>//g' public/sitemap.xml
 
 # Upload to server
-ssh connorcode@connorslade.com "rm -rf /mnt/block/static/mslicer.com/*"
-scp -r public/* connorcode@connorslade.com:/mnt/block/static/mslicer.com/ # todo: use rsync
+ssh -i $KEY $HOST "rm -rf /mnt/block/static/mslicer.com/*"
+scp -i $KEY -r public/* $HOST:/mnt/block/static/mslicer.com/ # todo: use rsync
