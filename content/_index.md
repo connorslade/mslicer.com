@@ -92,6 +92,10 @@ cd mslicer
 cargo build --release --package mslicer
 ```
 
+## Support
+
+If you run into any issues, have any questions, or just want to suggest a feature, don't hesitate to reach out on [Zulip](https://mslicer.zulipchat.com) or create an [issue on GitHub](https://github.com/connorslade/mslicer/issues/new).
+
 <style>
     .downloads {
         display: grid;

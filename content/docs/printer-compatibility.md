@@ -4,13 +4,14 @@ description: Printers that are known to work with mslicer
 date: 2026-10-07
 ---
 
-mslicer can output `.goo`, `.ctb` and `.nanodlp` files, so if your printer supports any of those formats it should work.
-Resin formats are not well documented and there are often multiple versions used by different printer generations, so incompatibilities are possible!
-If you can't get your printer to work with mslicer please make an [issue on GitHub](https://github.com/connorslade/mslicer/issues/new/choose) or reach out over [Zulip](https://mslicer.zulipchat.com).
+mslicer can output `.goo`, `.ctb`, and `.nanodlp` files, so if your printer supports any of those formats, it should work.
+Resin formats are not well documented, and there are often multiple versions used by different printer generations, so incompatibilities are possible!
+If you can't get your printer to work with mslicer, please make an [issue on GitHub](https://github.com/connorslade/mslicer/issues/new/choose) or reach out over [Zulip](https://mslicer.zulipchat.com).
 
 ## Verified Printers
 
-Below is the list of printers that are known to work with mslicer, if your printer isn't on this list but it works <a href="#:~:text=make%20an%20issue%20on%20GitHub%20or%20reach%20out%20over%20Zulip">reach out</a> to get it added!
+Below is the list of printers that are known to work with mslicer.
+If your printer isn't on this list but it works, <a href="#:~:text=make%20an%20issue%20on%20GitHub%20or%20reach%20out%20over%20Zulip">reach out</a> to get it added!
 
 ### Elegoo
 
