@@ -13,5 +13,5 @@ rm -r public/version/
 sed -zi 's/[[:space:]]*<url>[[:space:]]*<loc>[^<]*\/version\/<\/loc>.*\?<\/url>//g' public/sitemap.xml
 
 # Upload to server
-ssh -i $KEY $HOST "rm -rf /mnt/block/static/mslicer.com/*"
-scp -i $KEY -r public/* $HOST:/mnt/block/static/mslicer.com/ # todo: use rsync
+ssh -4 -i $KEY $HOST "rm -rf /mnt/block/static/mslicer.com/*"
+scp -4 -i $KEY -r public/* $HOST:/mnt/block/static/mslicer.com/ # todo: use rsync
