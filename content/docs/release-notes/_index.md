@@ -11,5 +11,5 @@ Note that older versions don't have release notes, so check the changelog.
 
 I try to make a release approximately monthly when I'm working on the project.
 
-- [v0.10.0](v0-10-0) &mdash; Coming Soon! **(NEW!)**
+- [v0.10.0](v0-10-0) &mdash; October 21st, 2026 **(NEW!)**
 - [v0.9.0](v0-9-0) &mdash; August 26th, 2026
