@@ -22,8 +22,14 @@ If the defective region is small (sometimes infinitesimally)[^3] the mesh may be
 ## Example
 
 Consider this simple example mesh, I've highlighted two faces in red and green.
-Currently the mesh is not defective, but if the red or green face were to be deleted from the mesh there would be a hole.
-So... lets see what would happen if you were to slice this mesh with either face removed.
+Currently the mesh is not defective and will slice perfectly fine, but if the red or green face were to be deleted from the mesh there would be a hole.
+So... lets see what would happen if you were to slice this mesh with each highlighted face removed.
+
+Note that removing either face will trigger the defective mesh warning.
+
+</div>
+<img src="/docs/defective-meshes/example-mesh.png" style="max-width: 250px;" />
+</div>
 
 ### Missing Green Face
 
@@ -32,11 +38,7 @@ Looking at the slice preview, (as the popup warns) the last 40 layers have a sli
 
 <div class="row" style="gap: 10px;">
 <img src="/docs/defective-meshes/green-sliced.png" />
-<img src="/docs/defective-meshes/green-warning.png" style="width: initial; max-width: 100%;" />
-</div>
-
-</div>
-<img src="/docs/defective-meshes/example-mesh.png" style="max-width: 300px;" />
+<img src="/docs/defective-meshes/green-warning.png" />
 </div>
 
 ### Missing Red Face
@@ -75,7 +77,7 @@ I have generally had better luck with the paid tools (they have free trials), bu
 > It finds the intersection of your models with the slicing plane, which returns a 2D polygon.
 > It then matches up the volume entry and exit points for each scan line (pixel Y coordinate) and emits runs of pixel values between them.
 
-[^2]: Winding Order (rendered gray)
+[^2]: Winding Order
 
 > Mesh faces are just lists of three points in 3D space.
 > In order to know if some point is inside a mesh in the case of self-intersecting meshes, the 'ray cast' returns the facing direction of the face it hit.

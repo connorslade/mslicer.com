@@ -11,15 +11,20 @@ description: mslicer documentation pages.
 - [Printer Compatibility](printer-compatibility) &mdash; Printers that are known to work with mslicer
 - [Support Placement](support-placement) &mdash; Recommended method for adding supports to models before printing
 - [Defective Meshes](defective-meshes) &mdash; What to do if you get the defective mesh warning
+- [Mesh Reconstruction](mesh-reconstruction) &mdash; Converting a sliced file back into a mesh
+- [msla Format Icons (Linux)](msla-thumbs) &mdash; KDE plugin for slided MSLA file icons
+
+## Projects
+
 - [PCB Photolighography](pcb-photolighography) &mdash; Exposing photoresist and soldermask with a MSLA printer **(NEW!)**
 - [3D Printing Phonograph Records](phonograph-record) &mdash; Using the power of modern technology to make really bad phonograph records
-- [msla Format Icons (Linux)](msla-thumbs) &mdash; KDE plugin for slided MSLA file icons
 
 ## Miscellaneous
 
 <!--- [Features](features) &mdash; Overview of mslicer's more interesting features-->
 - [Release Notes](release-notes) &mdash; Overview of the biggest changes in a release **(NEW!)**
 - [Benchmark](benchmark) &mdash; Speed comparison with other slicers
+<!--- [Glossary](glossary) &mdash; Explanations on some terms commonly used in the docs-->
 - [Changelog](changelog) &mdash; Changelogs for the stable releases
 - [History](history) &mdash; Why I started this project
 

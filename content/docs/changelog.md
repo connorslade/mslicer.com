@@ -9,7 +9,7 @@ See [Release Notes](/docs/release-notes) for more in-depth and visual explanatio
 You can view or download previous releases [on Github](https://github.com/connorslade/mslicer/releases).
 I try to make a release approximately monthly when I'm working on the project!
 
-## v0.10.0 &mdash; Coming Soon!!!
+## v0.10.0 &mdash; October 21st, 2026
 
 - Merge lift and retract distance settings.
   In practice they should always be the same and the setting was only supported by `.goo`

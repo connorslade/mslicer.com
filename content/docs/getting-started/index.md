@@ -4,6 +4,12 @@ description: A brief introduction to mslicer, the open source MSLA resin slicer.
 date: 2026-09-01
 ---
 
+<link
+rel="stylesheet"
+type="text/css"
+href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/regular/style.css"
+/>
+
 Welcome to mslicer!
 I'll try to give a good overview of the program in this document.
 If you run into any bugs or just have feature requests, please don't hesitate to reach out on [Zulip](https://mslicer.zulipchat.com) or create an [issue on GitHub](https://github.com/connorslade/mslicer/issues/new).
@@ -26,7 +32,6 @@ If you run into any bugs or just have feature requests, please don't hesitate to
   - [Slice Config](#slice-config)
   - [Advanced Layout](#advanced-layout)
   - [Custom Presets](#custom-presets)
-  - [Mesh Reconstruction](#mesh-reconstruction)
   - [Spacenav](#spacenav)
 
 </details>
@@ -68,8 +73,6 @@ If the build volume is not correct you will get inaccurate printed dimensions, a
 
 If you have a 3Dconnexion device and want to get that working in mslicer, see [Spacenav](#spacenav).
 
-<!-- TODO: MENTION MODES -->
-
 ## Models
 
 mslicer can load `.stl` and `.obj` meshes.
@@ -78,14 +81,27 @@ Not all meshes are created equal, though; some (especially those downloaded from
 If you encounter this issue or see the 'Defective Mesh' [warning](#model-warnings), see [Defective Meshes](/docs/defective-meshes).
 For now, you can also load the built-in test model (the [Utah Teapot](https://en.wikipedia.org/wiki/Utah_teapot)) by pressing `Ctrl+T` or `⌘+T` on Mac.
 
-To move around the viewport, scroll to move towards or away from the target point, drag with left click to orbit the target point, and drag with right click to translate the target point.
-You can also switch between the default perspective camera and an orthographic camera in the workspace panel.
-
 Each model in your project is listed in the `Models` panel.
 By clicking a model in the 3D view or the Models panel, you can access all its properties, including size, position, and rotation, as well as run actions like deleting the model or aligning it to the bed (see [Model Properties](#model-properties) for a complete description).
-The recommended way to position multiple models in a workspace is with 'Auto Layout', either quick layout, `Ctrl+L` (`⌘+L` on Mac) or with the [Advanced Layout](#) tool. <!-- TODO -->
+The recommended way to position multiple models in a workspace is with 'Auto Layout', either quick layout, `Ctrl+L` (`⌘+L` on Mac) or with the [Advanced Layout](#advanced-layout) tool. <!-- TODO -->
 
 Since mslicer's automatic and manual support placement features are still under development and not usable for most models, use the method described in the [Support Placement](/docs/support-placement) page.
+
+## Viewport
+
+To move around the viewport, scroll to move towards or away from the target point, drag with left click to orbit the target point, and drag with right click to translate the target point.
+You can also switch between the default perspective camera and an orthographic camera in the 'Camera' dropdown of the `Workspace` panel.
+
+There are three viewport modes, selectable with the buttons on the top left.
+Additionally, there is a fourth button (<i class="ph ph-info"></i>) that lets you toggle the hover overlay and select how much information to show (regular vs detailed).
+
+- <i class="ph ph-cursor-click"></i> **Cursor** &mdash; Selects a model, particularly useful with keyboard shortcuts like Delete (D), Duplicate (C), Hide (H), etc.
+- <i class="ph ph-line-segment"></i> **Support** &mdash; Used for manually adding or selecting supports. (Remember supports are still in development!)
+- <i class="ph ph-triangle"></i> **Orient** &mdash; The model will be transformed so that the face you click is made parallel to the build plate (facing down).
+  This makes orienting models much easier, removing the need to manually edit the rotation angles.
+
+The modes can be switched by clicking the buttons or with the keyboard shortcuts 1 for Cursor, 2 for Support, and 3 for Orient.
+Note that you can hold shift while clicking to add to your selection or hold Shift while drag-clicking to select multiple models or supports (depending on the mode) in some area on the screen.
 
 ## Slicing
 
@@ -103,11 +119,11 @@ You can drag to pan, scroll to zoom, and scrub through the slider on the left to
 The top bar of this panel lets you save to a `.goo`, `.ctb`, or `.nanodlp` file, send to a printer wirelessly (see [Remote Print](#remote-print)), detect islands, or reconstruct a mesh.
 Islands are clusters of voxels that are not supported from below and can't be printed properly.
 After detecting islands, look for any red layers on the left slider and red voxels within those layers.
-[Mesh reconstruction](#mesh-reconstruction) is intended for re-slicing a model if you only have a sliced file and don't have the original mesh.
+[Mesh reconstruction](/docs/mesh-reconstruction) is intended for re-slicing a model if you only have a sliced file and don't have the original mesh.
 
 The sidebar exposes tools for modifying and analyzing sliced files generated in mslicer or loaded from disk (`File › Load Sliced`, `Ctrl+Shift+I`, or `⌘+Shift+I` on Mac):
 
-- **Preview Image** &mdash; Allows generating a new image from whatever is currently visible in the 3D workspace, replacing the image with one from disk, or overlaying custom text.
+- **Preview Image** &mdash; You can customize the generated preview image that gets embedded in the sliced just by clicking and dragging on the image to reposition the camera.
 - **Slice Preview** &mdash; Configuration for the slice preview itself.
   Many resin printers have rectangular (non-square) LCD pixels, which means if the preview uses square pixels (Screen Space) the image will appear stretched.
   The view direction lets you flip the slice preview to see how it would look on either the LCD screen or the build plate after flipping it upright.
@@ -120,12 +136,10 @@ The sidebar exposes tools for modifying and analyzing sliced files generated in 
   The mass and cost are calculated from the estimated volume and the provided constants: resin density and unit cost.
 - **Layer Properties** &mdash; Shows the height (Z-position), run count, and memory usage of the currently previewed layer.
 - **File Properties** &mdash; Shows the default slice height (ignoring layers with variable layer height) as well as the size and resolution of the printer it was sliced for.
+- **Surface Area** &mdash; You can view a plot of the surface area of your sliced file.
+  This can be useful as large surface areas or big decreases in surface area can indicate that a lot of force will be required to lift the build plate and print failure could occur.
 - **Defects** &mdash; Defective meshes can cause slicing defects, but won't always.
   If you have sliced a defective mesh and it results in slice defects, you can see which layers were affected here.
-
-<!--- **File Analysis** &mdash; You can view a plot of the surface area of your sliced file.
-  This can be useful as large surface areas or big decreases in surface area can indicate that a lot of force will be required to lift the build plate and print failure could occur.
-  I plan to add some more analysis types here in the future.-->
 
 ## Remote Print
 
@@ -176,12 +190,17 @@ In the 'Model' panel there are actions, properties, and some mesh statistics. St
   There is also a tool, `Tools › Collect Instances`, that creates new collections grouping all instances of the same mesh.
 - **Collect** &mdash; Creates a new collection (group of models) with the currently selected model.
 - **Align to Bed** &mdash; Changes the model's Z position so that its lowest point rests on the build plate.
-- **Split Bodies** &mdash; Some meshes contain multiple shells/components; this action separates them into their own models.
 - **Replace** &mdash; Lets you select a new mesh from the filesystem to replace the active model without resetting any model properties.
 - **Reload** &mdash; If you loaded a model in the current session, you will also be able to replace it with a new version of the file you loaded. This is useful when iterating on a design. (Not in screenshot)
-
+- **Mesh** submenu
+  - **Split Bodies** &mdash; Some meshes contain multiple shells/components; this action separates them into their own models.
+  - **Flip Winding Order** &mdash; Flips the winding order of every face in the mesh.
+    Good for meshes with a consistent but flipped face windings, if its not consistent, try the mesh repair.
+  - **Repair** &mdash; Runs the built-in basic mesh repair tool.
+  - **Export** &mdash; Lets you export a mesh as `.stl` or `.obj`.
+    Useful if you have created a mesh within mslicer with one of the generator tools.
 </div>
-<img src="/docs/getting-started/models.png" />
+<img src="/docs/getting-started/models.png" style="max-width: 396px;" />
 </div>
 
 If you select multiple models at the same time by shift-clicking them in either the 3D view or the `Model` panel, the delete, collect, and duplicate actions will still be available.
@@ -197,15 +216,21 @@ In the case that two models with different exposure values overlap, the higher e
 
 Faces is the number of triangles that make up the mesh, and volume is the volume of the mesh considering any scale factor you apply.
 
+
 ### Model Warnings
 
-Mesh warnings appear as a small warning icon by the model name in the `Models` panel.
+<div class="row">
+<div>
+
+Mesh warnings appear as a small warning icon (<i class="ph ph-warning"></i>) by the model name in the `Models` panel.
 There are currently two warnings.
 
-<img src="/docs/getting-started/model-warnings.png" style="width: inherit; max-width: 100%; border-radius: 0;" />
-
-- **Non Manifold Meshes** &mdash; The mesh is invalid and may produce unexpected results when slicing. See the [Models](#models) section for more details.
+- **Defective Mesh** &mdash; The mesh is invalid and may produce unexpected results when slicing. See [Defective Meshes](/docs/defective-meshes) for more details.
 - **Out of Bounds** &mdash; The model extends beyond the printer's build volume and will be cut off.
+
+</div>
+<img src="/docs/getting-started/model-warnings.png" />
+</div>
 
 ### Slice Config
 
@@ -216,14 +241,16 @@ You can set a global default slice config and reset to it at any point with the 
 Note that your slice config is saved to mslicer projects.
 
 - **Slice Mode** &mdash; mslicer can output slices either as raster layers for MSLA printers or vectors that (for example) can be used with a craft cutter (niche use case but I've made some cool things with it).
-- **Printer** &mdash; Defines the build volume and LCD resolution for your printer.
+- **Printer** &mdash; Defines the build volume and LCD resolution for your printer, with a preset or custom values.
 - **Slice Height** &mdash; The height of each slice. Note that the slice will be taken at the center of each layer.
 - **Anti Aliasing** &mdash; Uses grayscale values that more accurately represent the actual model geometry.
   The value of this setting is the number of effective samples that get averaged per voxel.
-  Unlike other slicers, this is calculated in 3D, which helps reduce the visibility of steps between layers.
+  Click the link button (<i class="ph ph-link-simple"></i>) to individually configure XY and Z anti-aliasing.
 - **First Layers** &mdash; For improved build plate adhesion, it is common to have much higher exposures for the first few layers.
   This setting controls how many layers use the 'First Layers' exposure config.
 - **Transition Layers** &mdash; To get a more even look, you can add some number of layers after the 'First Layers' that interpolate the exposure to its normal setting.
+
+The layer counts are set with a distance by default, click the <i class="ph ph-scales"></i> button to switch to a raw layer count.
 
 The 'Normal Layers' and 'First Layer' exposure configurations have the same properties:
 
@@ -276,24 +303,15 @@ Open the preset edit window with the pencil icon next to the printer setting in 
 
 Here you can create new presets, delete them, change their names, and, of course, configure their build volume and resolution.
 
-### Mesh Reconstruction
-
-<div class="row">
-<div>
-
-If you happen to have a sliced file and you want to convert it back to a mesh to re-slice or something, you're in luck!
-After loading a sliced file (or slicing something) you can press the 'Reconstruct Mesh' button in the `Sliced` panel, select a resolution (coarse, fine, or exact), and get the reconstructed mesh loaded into your project.
-
-The image is the Stanford dragon recreated from a sliced file at coarse fidelity.
-It looks pretty good for being downsampled so much (20× at coarse), but you can see some artifacts, especially in areas with lower curvature.
-Do note that since every voxel can create multiple triangles in the reconstructed mesh, the poly count will be enormous even at lower fidelity. This example resulted in over 3.3M faces.
-
-</div>
-<img src="/docs/getting-started/reconstructed-mesh.png" style="max-width: 431px;" />
-</div>
-
 ### Spacenav
 
 mslicer supports controlling the camera (and running some predefined shortcuts) with a 3Dconnexion device.
 This is currently only supported on Linux through the [Spacenav](https://spacenav.sourceforge.net/) library.
 To get it working, install the driver, start mslicer, and you should see 'Connected to Spacenav.' in the 'Spacenav' menu in the `Workspace` panel.
+
+<style>
+    i.ph {
+        position: relative;
+        top: 2px;
+    }
+</style>
