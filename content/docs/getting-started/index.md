@@ -6,7 +6,7 @@ date: 2026-09-01
 
 Welcome to mslicer!
 I'll try to give a good overview of the program in this document.
-If you run into any bugs or just have feature requests, please don't hesitate to make an [issue on GitHub](https://github.com/connorslade/mslicer/issues/new) or [contact me](https://connorslade.com/#:~:text=will%20enjoy%20this.-,Contact,-If%20you%20have) directly.
+If you run into any bugs or just have feature requests, please don't hesitate to reach out on [Zulip](https://mslicer.zulipchat.com) or create an [issue on GitHub](https://github.com/connorslade/mslicer/issues/new).
 
 <details open>
     <summary><strong>Contents</strong></summary>
@@ -63,17 +63,19 @@ The interface is made up of many panels that can be moved and reconfigured howev
 Use the `View` toolbar menu to hide or show specific panels or reset the layout to the default.
 
 The most important setting to change is your printer in the `Slice Config` panel.
-You can use one of the presets if you have an Elegoo or Phrozen printer; otherwise you will need to select `Custom` and fill in the build volume size and LCD resolution manually (or [create your own preset](#custom-presets)).
+You can use one of the [presets](/docs/printer-compatibility) if your printer is listed; otherwise you will need to select `Custom` and fill in the build volume size and LCD resolution manually (or [create your own preset](#custom-presets)).
 If the build volume is not correct you will get inaccurate printed dimensions, and if the resolution is wrong your printer may fail to load the output without even showing an error message!
 
 If you have a 3Dconnexion device and want to get that working in mslicer, see [Spacenav](#spacenav).
+
+<!-- TODO: MENTION MODES -->
 
 ## Models
 
 mslicer can load `.stl` and `.obj` meshes.
 Add one by going to `File › Import Model` or drag and drop a mesh file into the workspace.
-Not all meshes are created equal, though; some (especially those downloaded from the internet) have issues like holes, inconsistent winding order, un-welded seams, etc., which can cause unexpected errors while slicing.
-If you encounter this issue or see the 'Non Manifold Mesh' [warning](#model-warnings), see [Repairing Non-Manifold Meshes](/docs/non-manifold-meshes).
+Not all meshes are created equal, though; some (especially those downloaded from the internet) have issues like holes, inconsistent winding order, un-welded seams, etc., which can cause slicing defects.
+If you encounter this issue or see the 'Defective Mesh' [warning](#model-warnings), see [Defective Meshes](/docs/defective-meshes).
 For now, you can also load the built-in test model (the [Utah Teapot](https://en.wikipedia.org/wiki/Utah_teapot)) by pressing `Ctrl+T` or `⌘+T` on Mac.
 
 To move around the viewport, scroll to move towards or away from the target point, drag with left click to orbit the target point, and drag with right click to translate the target point.
@@ -81,16 +83,14 @@ You can also switch between the default perspective camera and an orthographic c
 
 Each model in your project is listed in the `Models` panel.
 By clicking a model in the 3D view or the Models panel, you can access all its properties, including size, position, and rotation, as well as run actions like deleting the model or aligning it to the bed (see [Model Properties](#model-properties) for a complete description).
-The recommended way to position multiple models in a workspace is with 'Auto Layout', either quick layout, `Ctrl+L` (`⌘+L` on Mac) or with the [Advanced Layout](#) tool.
+The recommended way to position multiple models in a workspace is with 'Auto Layout', either quick layout, `Ctrl+L` (`⌘+L` on Mac) or with the [Advanced Layout](#) tool. <!-- TODO -->
 
 Since mslicer's automatic and manual support placement features are still under development and not usable for most models, use the method described in the [Support Placement](/docs/support-placement) page.
-
-<!-- mention auto layout -->
 
 ## Slicing
 
 For a full description of the 'Slice Config' parameters see [Slice Config](#slice-config).
-The most notable one, 'Anti Aliasing', uses 3D supersampling anti-aliasing (SSAA) to pick grayscale values that more accurately represent the actual model geometry.
+The most notable one, 'Anti Aliasing', uses 3D supersample anti-aliasing (SSAA) to pick grayscale values that more accurately represent the actual model geometry.
 The actual value of this setting is the number of effective samples per voxel.
 
 Start a slice operation with the 'Slice' button on the top bar or `Ctrl+R` (`⌘+R` on Mac).
@@ -115,9 +115,17 @@ The sidebar exposes tools for modifying and analyzing sliced files generated in 
 - **Changing Exposure Settings** &mdash; You can load an existing sliced file and change the exposure settings for normal layers, first layers, or make exposure overrides on individual layers.
   The exposure override can also be useful for files sliced in mslicer, as it gives you super fine control of exposures.
   For example, if you want to combat the elephant foot effect by increasing the rest times for some of the layers after the first layers.
-- **File Analysis** &mdash; You can view a plot of the surface area of your sliced file.
+- **Resin Usage** &mdash; Shows the estimated resin volume that will be used when printed.
+  This is a conservative estimate, since it doesn't consider the uncured resin that gets wasted during cleaning / post-processing.
+  The mass and cost are calculated from the estimated volume and the provided constants: resin density and unit cost.
+- **Layer Properties** &mdash; Shows the height (Z-position), run count, and memory usage of the currently previewed layer.
+- **File Properties** &mdash; Shows the default slice height (ignoring layers with variable layer height) as well as the size and resolution of the printer it was sliced for.
+- **Defects** &mdash; Defective meshes can cause slicing defects, but won't always.
+  If you have sliced a defective mesh and it results in slice defects, you can see which layers were affected here.
+
+<!--- **File Analysis** &mdash; You can view a plot of the surface area of your sliced file.
   This can be useful as large surface areas or big decreases in surface area can indicate that a lot of force will be required to lift the build plate and print failure could occur.
-  I plan to add some more analysis types here in the future.
+  I plan to add some more analysis types here in the future.-->
 
 ## Remote Print
 

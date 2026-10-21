@@ -10,7 +10,7 @@ description: mslicer documentation pages.
 - [Getting Started](getting-started) &mdash; Everything you need to know about mslicer (start here)
 - [Printer Compatibility](printer-compatibility) &mdash; Printers that are known to work with mslicer
 - [Support Placement](support-placement) &mdash; Recommended method for adding supports to models before printing
-- [Repairing Non-Manifold Meshes](non-manifold-meshes) &mdash; What to do if you get the non-manifold mesh warning
+- [Defective Meshes](defective-meshes) &mdash; What to do if you get the defective mesh warning
 - [PCB Photolighography](pcb-photolighography) &mdash; Exposing photoresist and soldermask with a MSLA printer **(NEW!)**
 - [3D Printing Phonograph Records](phonograph-record) &mdash; Using the power of modern technology to make really bad phonograph records
 - [msla Format Icons (Linux)](msla-thumbs) &mdash; KDE plugin for slided MSLA file icons
@@ -25,7 +25,6 @@ description: mslicer documentation pages.
 
 ## Developers
 
-<!--- [Contributing]()-->
 - [Slicing from the Command Line](cli-slicer) &mdash; mslicer's (simple) command line interface
 - [Remote Print HTTP Status Proxy](remote-print-proxy) &mdash; Remotely monitor your print progress
 - [msla_format](msla-format) &mdash; Library for encoding and decoding common MSLA file formats.
