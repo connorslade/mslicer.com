@@ -1,7 +1,7 @@
 ---
 title: Getting Started
 description: A brief introduction to mslicer, the open source MSLA resin slicer.
-date: 2026-09-01
+date: 2026-10-21
 ---
 
 <link
