@@ -28,7 +28,7 @@ So... lets see what would happen if you were to slice this mesh with each highli
 Note that removing either face will trigger the defective mesh warning.
 
 </div>
-<img src="/docs/defective-meshes/example-mesh.png" style="max-width: 250px;" />
+<img src="/docs/defective-meshes/example-mesh.png" style="max-width: min(250px, 100%);" />
 </div>
 
 ### Missing Green Face

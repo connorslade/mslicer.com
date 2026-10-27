@@ -4,11 +4,7 @@ description: Using the power of modern technology to make really bad phonograph 
 date: 2026-10-05
 ---
 
-<link
-rel="stylesheet"
-type="text/css"
-href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/regular/style.css"
-/>
+{{phosphor_icons()}}
 
 > Note that the generator tool featured in this document is not in the current release of mslicer.
   Either wait for the next release (v0.10.0), or download a development build if you want to try it out now.
@@ -28,7 +24,7 @@ The physical encoding itself is quite straightforward.
 The disk has a 90° groove cut into it about 25μm-30μm deep, the audio signal then moves the groove diagonally for each channel (see drawing on the right).
 This has the effect of being backward compatible with mono phonographs because lateral displacement is the sum of both channels.
 </p>
-<img src="/docs/phonograph-record/groove-diagram.png" style="max-width: 250px;" />
+<img src="/docs/phonograph-record/groove-diagram.png" style="max-width: min(250px, 100%);" />
 </div>
 
 But there is another layer of encoding: RIAA equalization, which is designed to increase recording time (by reducing the average groove width) and improve sound quality.
@@ -40,7 +36,7 @@ On playback, this gets reversed, which also reduces the high-frequency noise fro
 <div class="row">
 <div>
 
-In order to 3D print a phonograph record, we first need a mesh to slice, bringing us to the new '<i class="ph ph-hammer"></i> Tools › Fun › Phonograph Record' generator.
+In order to 3D print a phonograph record, we first need a mesh to slice, bringing us to the new '{{icon(class="hammer")}} Tools › Fun › Phonograph Record' generator.
 Just load a `.wav` audio file, pick your settings, click generate, and in about a second you will have a mesh!
 Unlike real record lathes, this generator doesn't currently add a run-out groove or support variable pitch.
 But this is just a little experiment, so that's fine.
@@ -55,7 +51,7 @@ Most of the parameters are self-explanatory, but here are some descriptions of t
 - Modulation &mdash; Audio gain multiplier. Can be used to change the groove width to better fit with your chosen pitch.
 
 </div>
-<img src="/docs/phonograph-record/generator.png" style="max-width: 431px" />
+<img src="/docs/phonograph-record/generator.png" style="max-width: min(431px, 100%);" />
 </div>
 
 After all that, here is an example generated mesh.
@@ -85,11 +81,11 @@ Here are the settings I changed from the defaults, as a starting point:
 | Pitch          | 150μm                                                                                                                                                                                    |
 | Playback Speed | 78rpm                                                                                                                                                                                    |
 | Resolution     | 40kHz                                                                                                                                                                                    |
-| Normal Layers  | 2.0s (<i class="ph ph-clock"></i> 10.0s)                                                                                                                                                 |
-| Bottom Layers  | 10.0s (<i class="ph ph-clock"></i> 10.0s)                                                                                                                                                |
+| Normal Layers  | 2.0s ({{icon(class="clock")}} 10.0s)                                                                                                                                                     |
+| Bottom Layers  | 10.0s ({{icon(class="clock")}} 10.0s)                                                                                                                                                    |
 
 </div>
-<video src="https://files.connorslade.com/Video/3d-printed-phonograph-record-v2.webm" controls style="max-width: 431px;"></video>
+<video src="https://files.connorslade.com/Video/3d-printed-phonograph-record-v2.webm" controls style="max-width: min(431px, 100%);"></video>
 </div>
 
 ## Appendix

@@ -17,5 +17,5 @@ Do note that since every voxel can create multiple triangles in the reconstructe
 Greedy meshing is a lot faster and results in less faces, but it will not always create manifold meshes.
 
 </div>
-<img src="/docs/mesh-reconstruction/reconstructed-mesh.png" style="max-width: 431px;" />
+<img src="/docs/mesh-reconstruction/reconstructed-mesh.png" style="max-width: min(431px, 100%);" />
 </div>

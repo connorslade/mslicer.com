@@ -4,11 +4,7 @@ description: A brief introduction to mslicer, the open source MSLA resin slicer.
 date: 2026-10-21
 ---
 
-<link
-rel="stylesheet"
-type="text/css"
-href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/regular/style.css"
-/>
+{{phosphor_icons()}}
 
 Welcome to mslicer!
 I'll try to give a good overview of the program in this document.
@@ -93,11 +89,11 @@ To move around the viewport, scroll to move towards or away from the target poin
 You can also switch between the default perspective camera and an orthographic camera in the 'Camera' dropdown of the `Workspace` panel.
 
 There are three viewport modes, selectable with the buttons on the top left.
-Additionally, there is a fourth button (<i class="ph ph-info"></i>) that lets you toggle the hover overlay and select how much information to show (regular vs detailed).
+Additionally, there is a fourth button ({{icon(class="info")}}) that lets you toggle the hover overlay and select how much information to show (regular vs detailed).
 
-- <i class="ph ph-cursor-click"></i> **Cursor** &mdash; Selects a model, particularly useful with keyboard shortcuts like Delete (D), Duplicate (C), Hide (H), etc.
-- <i class="ph ph-line-segment"></i> **Support** &mdash; Used for manually adding or selecting supports. (Remember supports are still in development!)
-- <i class="ph ph-triangle"></i> **Orient** &mdash; The model will be transformed so that the face you click is made parallel to the build plate (facing down).
+- {{icon(class="cursor-click")}} **Cursor** &mdash; Selects a model, particularly useful with keyboard shortcuts like Delete (D), Duplicate (C), Hide (H), etc.
+- {{icon(class="line-segment")}} **Support** &mdash; Used for manually adding or selecting supports. (Remember supports are still in development!)
+- {{icon(class="triangle")}} **Orient** &mdash; The model will be transformed so that the face you click is made parallel to the build plate (facing down).
   This makes orienting models much easier, removing the need to manually edit the rotation angles.
 
 The modes can be switched by clicking the buttons or with the keyboard shortcuts 1 for Cursor, 2 for Support, and 3 for Orient.
@@ -200,7 +196,7 @@ In the 'Model' panel there are actions, properties, and some mesh statistics. St
   - **Export** &mdash; Lets you export a mesh as `.stl` or `.obj`.
     Useful if you have created a mesh within mslicer with one of the generator tools.
 </div>
-<img src="/docs/getting-started/models.png" style="max-width: 396px;" />
+<img src="/docs/getting-started/models.png" style="max-width: min(396px, 100%);" />
 </div>
 
 If you select multiple models at the same time by shift-clicking them in either the 3D view or the `Model` panel, the delete, collect, and duplicate actions will still be available.
@@ -222,7 +218,7 @@ Faces is the number of triangles that make up the mesh, and volume is the volume
 <div class="row">
 <div>
 
-Mesh warnings appear as a small warning icon (<i class="ph ph-warning"></i>) by the model name in the `Models` panel.
+Mesh warnings appear as a small warning icon ({{icon(class="warning")}}) by the model name in the `Models` panel.
 There are currently two warnings.
 
 - **Defective Mesh** &mdash; The mesh is invalid and may produce unexpected results when slicing. See [Defective Meshes](/docs/defective-meshes) for more details.
@@ -245,12 +241,12 @@ Note that your slice config is saved to mslicer projects.
 - **Slice Height** &mdash; The height of each slice. Note that the slice will be taken at the center of each layer.
 - **Anti Aliasing** &mdash; Uses grayscale values that more accurately represent the actual model geometry.
   The value of this setting is the number of effective samples that get averaged per voxel.
-  Click the link button (<i class="ph ph-link-simple"></i>) to individually configure XY and Z anti-aliasing.
+  Click the link button ({{icon(class="link-simple")}}) to individually configure XY and Z anti-aliasing.
 - **First Layers** &mdash; For improved build plate adhesion, it is common to have much higher exposures for the first few layers.
   This setting controls how many layers use the 'First Layers' exposure config.
 - **Transition Layers** &mdash; To get a more even look, you can add some number of layers after the 'First Layers' that interpolate the exposure to its normal setting.
 
-The layer counts are set with a distance by default, click the <i class="ph ph-scales"></i> button to switch to a raw layer count.
+The layer counts are set with a distance by default, click the {{icon(class="scales")}} button to switch to a raw layer count.
 
 The 'Normal Layers' and 'First Layer' exposure configurations have the same properties:
 
@@ -308,10 +304,3 @@ Here you can create new presets, delete them, change their names, and, of course
 mslicer supports controlling the camera (and running some predefined shortcuts) with a 3Dconnexion device.
 This is currently only supported on Linux through the [Spacenav](https://spacenav.sourceforge.net/) library.
 To get it working, install the driver, start mslicer, and you should see 'Connected to Spacenav.' in the 'Spacenav' menu in the `Workspace` panel.
-
-<style>
-    i.ph {
-        position: relative;
-        top: 2px;
-    }
-</style>

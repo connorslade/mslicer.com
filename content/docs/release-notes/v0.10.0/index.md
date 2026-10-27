@@ -4,11 +4,7 @@ description: Release notes for mslicer v0.10.0.
 date: 2026-10-20
 ---
 
-<link
-rel="stylesheet"
-type="text/css"
-href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/regular/style.css"
-/>
+{{phosphor_icons()}}
 
 This is a big release, about two months in the making!
 The release notes only cover the biggest and most interesting new features. Check the [changelog](/docs/changelog) for a full list, including bug fixes.
@@ -19,11 +15,11 @@ The release notes only cover the biggest and most interesting new features. Chec
 <div>
 
 The 3D viewport now has three modes that change what clicking and hovering do: Cursor (default), Support, and Orient.
-Additionally, there is a fourth button (<i class="ph ph-info"></i>) that lets you toggle the hover overlay and select how much information to show (regular vs detailed).
+Additionally, there is a fourth button ({{icon(class="info")}})) that lets you toggle the hover overlay and select how much information to show (regular vs detailed).
 
-- **Cursor** &mdash; Selects a model in the `Models` panel, particularly useful with keyboard shortcuts like Delete (D), Duplicate (C), Hide (H), etc.
-- **Support** &mdash; Used with the `Supports` panel for manually adding or selecting supports.
-- **Orient** &mdash; The model will be transformed so that the face you click is made parallel to the build plate (facing down).
+- {{icon(class="cursor-click")}} **Cursor** &mdash; Selects a model in the `Models` panel, particularly useful with keyboard shortcuts like Delete (D), Duplicate (C), Hide (H), etc.
+- {{icon(class="line-segment")}} **Support** &mdash; Used with the `Supports` panel for manually adding or selecting supports.
+- {{icon(class="triangle")}} **Orient** &mdash; The model will be transformed so that the face you click is made parallel to the build plate (facing down).
   This makes orienting models much easier, removing the need to manually edit the rotation angles.
 
 </div>
@@ -78,7 +74,7 @@ A few new sections were added to the analysis section of the sidebar: Resin Usag
 The default list of printer presets has been significantly expanded, from 19 in the previous release to 100!
 Most of these presets were scraped from my ChituBox installation if they were marked as supporting `.goo` or `.ctb` files.
 
-Additionally, printers that are verified to work with mslicer are marked in the UI (see the <i class="ph ph-check-circle"></i> in the screenshot on the right) and on the new [Printer Compatibility](/docs/printer-compatibility) page.
+Additionally, printers that are verified to work with mslicer are marked in the UI (see the {{icon(class="check-circle")}}) in the screenshot on the right) and on the new [Printer Compatibility](/docs/printer-compatibility) page.
 The compatibility page also mentions if specific printers need to be handled differently, like using the new 'Legacy Chitu' output format.
 
 ### Chitu Legacy Format
@@ -108,7 +104,7 @@ It just converts the binary voxel data directly into a mesh (with optional subsa
 The model on the right was reconstructed from the sliced Utah Teapot, with a lot of downsampling (for artistic effect).
 
 </div>
-<img src="/docs/release-notes/v0-10-0/teapot-downsample.png" style="max-width: 335px;" />
+<img src="/docs/release-notes/v0-10-0/teapot-downsample.png" style="max-width: min(335px, 100%);" />
 </div>
 
 ### Image Layer

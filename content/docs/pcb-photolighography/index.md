@@ -4,11 +4,7 @@ description: Exposing photoresist and soldermask with a MSLA printer
 date: 2026-07-05
 ---
 
-<link
-rel="stylesheet"
-type="text/css"
-href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/regular/style.css"
-/>
+{{phosphor_icons()}}
 
 <div class="row">
 <div>
@@ -28,7 +24,7 @@ Photoresist is a UV light-sensitive material that, once exposed and developed, l
 There are five main steps to etch a PCB:
 
 </div>
-<video src="https://files.connorslade.com/Video/vu-meter.mp4" controls style="max-width: 350px;"></video>
+<video src="https://files.connorslade.com/Video/vu-meter.mp4" controls style="max-width: min(350px, 100%);"></video>
 </div>
 
 
@@ -82,10 +78,10 @@ Edge cuts define the edges of your PCB, which is important for positioning.
 <div class="row">
 <div>
 
-In mslicer, open the PCB tool from the '<i class="ph ph-hammer"></i> Tools' dropdown in the top bar.
+In mslicer, open the PCB tool from the '{{icon(class="hammer")}} Tools' dropdown in the top bar.
 Select 'Load Gerbers' and select the copper and edge cuts layers.
 
-Each layer has two checkboxes: layer visibility (<i class="ph ph-eye"></i>) and whether it's considered part of the bounding box (<i class="ph ph-bounding-box"></i>).
+Each layer has two checkboxes: layer visibility ({{icon(class="eye")}}) and whether it's considered part of the bounding box ({{icon(class="bounding-box")}}).
 The bounding box is used to position your Gerber in the 2D coordinate system of the LCD.
 Whichever alignment point you select (top left, center, bottom right, etc.), that point on the Gerber is positioned at that point on the LCD.
 For example, with center alignment, the center of the bounding box will be positioned at the center of the LCD.
@@ -115,7 +111,7 @@ To calibrate, tape a piece of the photoresist film to the bottom of it and creat
 You can then measure the position and rotational offset and enter that into the PCB tool.
 
 </div>
-<img src="/docs/pcb-photolighography/axis.png" style="border-radius: 0; max-width: 250px;"></img>
+<img src="/docs/pcb-photolighography/axis.png" style="border-radius: 0; max-width: min(250px, 100%);"></img>
 </div>
 
 The flip axis is defined starting at the flip alignment (alignment setting in the flip dropdown) and extending at the set angle (which is relative to the positive X axis).
