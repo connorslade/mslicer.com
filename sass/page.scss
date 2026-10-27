@@ -19,10 +19,6 @@
     display: flex;
     gap: 2em;
 
-    @media(max-width: 750px) {
-        display: block;
-    }
-
     & > div > p {
         margin-top: 0;
     }
@@ -39,9 +35,22 @@
       flex: 1 1 0;
       min-width: 0;
     }
+
+    @media(max-width: 750px) {
+        display: block;
+
+        & > img, & > video {
+            max-width: 100%;
+        }
+    }
 }
 
 .inherit {
     width: inherit;
     max-width: 100%;
+}
+
+i.ph {
+    position: relative;
+    top: 2px;
 }

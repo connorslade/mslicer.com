@@ -1,6 +1,6 @@
 ---
 title: Cyanotypes
-description: 2D printing on a 3D printer… for some reason
+description: 2D printing with a 3D printer… for some reason
 date: 2026-10-27
 ---
 
@@ -49,7 +49,7 @@ Set the XY dimensions to their maximums and Z to zero; the default 15 steps shou
 See my result on the right. (Ignore my bad post-processing, which caused the ugly brown spots!)
 
 After scanning the print into an image, I converted it to grayscale and measured the average darkness of each band.
-Fitting a curve to [the data](https://www.desmos.com/calculator/6bie627yoa), I found that, for my setup, the needed remapping curve is <img src="/docs/cyanotypes/mapping.svg" style="width: initial" />.
+Fitting a curve to [the data](https://www.desmos.com/calculator/pjshcdtyge), I found that, for my setup, the needed remapping curve is <img src="/docs/cyanotypes/mapping.svg" style="width: initial" />.
 I then modified the exposure remapping Bézier handles in mslicer to approximate it.
 
 I'm not sure how the required remapping changes with different formulations, but you may just be able to copy my values.

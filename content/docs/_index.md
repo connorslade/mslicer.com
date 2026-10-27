@@ -18,6 +18,7 @@ description: mslicer documentation pages.
 
 - [PCB Photolighography](pcb-photolighography) &mdash; Exposing photoresist and soldermask with a MSLA printer
 - [3D Printing Phonograph Records](phonograph-record) &mdash; Using the power of modern technology to make really bad phonograph records
+- [Cyanotypes](cyanotypes) &mdash; 2D printing with a 3D printer… for some reason
 
 ## Miscellaneous
 
