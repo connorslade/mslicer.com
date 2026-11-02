@@ -9,6 +9,19 @@ See [Release Notes](/docs/release-notes) for more in-depth and visual explanatio
 You can view or download previous releases [on Github](https://github.com/connorslade/mslicer/releases).
 I try to make a release approximately monthly when I'm working on the project!
 
+## v0.10.1 &mdash; November 2nd, 2026
+
+- Fix note word wrapping
+- Size render textures by viewport side not entire window
+- Fix rendering when both viewport and interactive preview are visible
+- Support HiDPI viewport rendering
+- Set FOV in degrees
+- Fix color attachment byte limit ([#45](https://github.com/connorslade/mslicer/issues/45))
+- Fix sliced memory usage not considering arc repeated layers
+- Fix crash when deleting selected custom printer
+- Always open sliced panel next to viewport
+- Allow viewing and editing keybinds
+
 ## v0.10.0 &mdash; October 21st, 2026
 
 - Merge lift and retract distance settings.

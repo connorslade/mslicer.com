@@ -15,5 +15,5 @@ theme = "min-light"
 commit = ""
 
 # Latest release
-version = "0.10.0"
-release-date = "October 21st, 2026"
+version = "0.10.1"
+release-date = "November 2nd, 2026"
